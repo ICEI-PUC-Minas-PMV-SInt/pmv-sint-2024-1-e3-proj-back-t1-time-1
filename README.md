@@ -15,7 +15,7 @@ Um sistema de estoque está sendo desenvolvido para uma farmácia popular, visan
 * Celso Nunes Soares
 * Gabriel Marco Ferreira Assis
 * Gean Carlos Campos Bráz
-* Laura Alice Santos leite
+* Laura Alice Santos Leite
 * Wesley de Camargo Murat
 
 ## Orientador
