@@ -1,23 +1,26 @@
-# TÍTULO DO PROJETO
+# SISTEMA DE ESTOQUE PARA FARMÁCIA POPULAR
 
-`CURSO`
+`CURSO: Sistemas Para Internet`
 
-`DISCIPLINA`
+`DISCIPLINA: Projetos - Desenvolvimento Web Back-end`
 
-`SEMESTRE`
+`Eixo 03`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Um sistema de estoque está sendo desenvolvido para uma farmácia popular, visando otimizar a gestão de medicamentos e produtos, agilizando reposições e oferecendo relatórios detalhados para uma melhor tomada de decisão.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Alessandra Gabriele Vataro da Silva Murat
+* Camila Patrícia Ferreira dos Santos 
+* Celso Nunes Soares
+* Gabriel Marco Ferreira Assis
+* Gean Carlos Campos Bráz
+* Laura Alice Santos leite
+* Wesley de Camargo Murat
 
 ## Orientador
 
-* Nome completo do professor 1
+* Will Ricardo dos Santos Machado
 
 ## Instruções de utilização
 
