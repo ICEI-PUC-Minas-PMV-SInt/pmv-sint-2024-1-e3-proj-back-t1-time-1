@@ -2,13 +2,29 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+Nesta seção do documento, abordaremos a criação de um Sistema de Estoque para Farmácias, com um foco primordial na perspectiva do usuário. Utilizaremos diversas técnicas e ferramentas para especificar o projeto de forma abrangente e precisa.
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Definição do Problema:
+O desafio principal é desenvolver um sistema que permita às farmácias gerenciar eficientemente seus medicamentos e produtos. Isso implica facilitar o controle de estoque, reduzir perdas devido ao vencimento de produtos e aprimorar a gestão financeira.
+
+Ideia de Solução:
+A solução proposta visa a criação de um sistema de estoque robusto e intuitivo, capaz de atender às necessidades das farmácias de maneira abrangente. Isso inclui a implementação de funcionalidades que facilitem o controle de medicamentos vencidos, identificação da demanda de produtos e melhoria nos processos operacionais.
+
+Técnicas e Ferramentas Utilizadas:
+
+Definição de Personas: Serão elaborados três perfis de usuários representativos, permitindo uma compreensão mais profunda das necessidades e expectativas dos clientes.
+Histórias de Usuários: Serão criadas histórias que descrevem cenários específicos de uso do sistema, fornecendo insights sobre as funcionalidades necessárias.
+Requisitos Funcionais e Não Funcionais: Serão identificados os requisitos relacionados às funções do sistema, bem como os requisitos de desempenho, segurança e usabilidade.
+Restrições do Projeto: Serão consideradas limitações como orçamento, prazos e recursos disponíveis, garantindo a viabilidade do projeto dentro de determinados parâmetros.
+Ao utilizar essas técnicas e ferramentas, buscamos garantir que o Sistema de Estoque para Farmácias seja desenvolvido de maneira eficaz, atendendo às necessidades dos usuários e superando os desafios enfrentados pelas farmácias na gestão de estoque.
 
 ## Personas
 
 Maria Silva é a farmacêutica responsável pela gestão de medicamentos na farmácia popular. Ela precisa de um sistema que facilite o controle de estoque, permitindo-lhe verificar a disponibilidade de medicamentos, suas datas de validade e histórico de vendas. Maria Silva também precisa gerar relatórios para cumprir com as regulamentações governamentais e para auxiliar na decisão de quais medicamentos devem ser adquiridos.
+
+![Personas](./img/Personas/persona_1.png)
+![Personas](./img/Personas/persona_2.png)
+![Personas](./img/Personas/persona_3.png)
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
@@ -29,19 +45,10 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 | EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
 | -------------------- | ---------------------------------- | -------------------------------------- |
-| Ana Paula            | Registrar a entrada e saída de produtos no sistema de estoque           | Manter um controle atualizado dos medicamentos e produtos disponíveis               |
-| Carlos André         | Receber notificações automáticas quando os níveis de estoque de determinados produtos estiverem baixos                 | Poder fazer pedidos de reposição de forma eficiente |
-| Liana Alves          | Acessar relatórios detalhados sobre o desempenho do estoque da minha farmácia                 | Tomar decisões estratégicas e melhorar a gestão do negócio |
+| Ana Paula            | Registrar a entrada e saída de produtos no sistema de estoque                                          | Manter um controle atualizado dos medicamentos e produtos disponíveis |
+| Carlos André         | Receber notificações automáticas quando os níveis de estoque de determinados produtos estiverem baixos | Poder fazer pedidos de reposição de forma eficiente                   |
+| Liana Alves          | Acessar relatórios detalhados sobre o desempenho do estoque da minha farmácia                          | Tomar decisões estratégicas e melhorar a gestão do negócio            |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
->
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Requisitos
 

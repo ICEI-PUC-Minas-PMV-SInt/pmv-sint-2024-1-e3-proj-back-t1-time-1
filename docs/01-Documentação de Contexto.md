@@ -13,6 +13,7 @@ Ter um sistema de gestão para farmácias projetado para otimizar e facilitar a 
 Ao oferecer uma solução abrangente e integrada, essa plataforma possibilita uma gestão mais ágil e eficaz, permitindo que os proprietários e gerentes concentrem seus esforços em outras áreas cruciais do negócio.
 
 ## Problema
+
 Em nossa análise da farmácia popular, identificamos um desafio crucial: a gestão ineficiente do estoque. Atualmente, a falta de um sistema adequado para controlar e organizar os produtos resulta em desperdício de recursos, escassez de itens essenciais e dificuldades para atender à demanda dos clientes de forma satisfatória. O processo manual de gestão do estoque é propenso a erros e falhas, afetando diretamente a operação diária da farmácia.
 
 Nosso projeto se concentra em melhorar a eficiência operacional da farmácia popular, uma empresa comprometida em fornecer medicamentos e produtos de saúde a preços acessíveis para a comunidade. Em nosso contexto, reconhecemos a necessidade de cumprir as regulamentações específicas do setor, mantendo um inventário preciso e atualizado. Para isso, buscamos implementar uma solução tecnológica que otimize as operações da farmácia e aprimore a experiência do cliente.
