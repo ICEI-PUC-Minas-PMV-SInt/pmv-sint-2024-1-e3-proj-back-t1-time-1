@@ -14,16 +14,16 @@ Orientador:
 
 ## Sumário
 
-1.	Introdução .....................................................................................	4
-2. 	Objetivo ........................................................................................	5
-3. 	Justificativa ...................................................................................	6
-4.	Criação de um Sistema de Estoque para Farmácias ................................................. 7 
-5.	Personas ........................................................................................	8
-6.	Histórias de Usuários ........................................................................... 9
-7.	Requisitos .....................................................................................	10
-8. 	Avaliações ......................................................................................	11
-9.	Identificar os perfis de usuários, investigar suas necessidades e elaborar personas ............	12
-10. 	Conclusão ....................................................................................	16
+1.	Introdução 
+2. 	Objetivo 
+3. 	Justificativa 
+4.	Criação de um Sistema de Estoque para Farmácias 
+5.	Personas 
+6.	Histórias de Usuários 
+7.	Requisitos 
+8. 	Avaliações 
+9.	Identificar os perfis de usuários, investigar suas necessidades e elaborar personas 
+10. Conclusão 
 
 
 
