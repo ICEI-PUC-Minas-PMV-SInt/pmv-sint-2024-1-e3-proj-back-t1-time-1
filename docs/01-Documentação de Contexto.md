@@ -18,6 +18,12 @@ Em nossa análise da farmácia popular, identificamos um desafio crucial: a gest
 
 Nosso projeto se concentra em melhorar a eficiência operacional da farmácia popular, uma empresa comprometida em fornecer medicamentos e produtos de saúde a preços acessíveis para a comunidade. Em nosso contexto, reconhecemos a necessidade de cumprir as regulamentações específicas do setor, mantendo um inventário preciso e atualizado. Para isso, buscamos implementar uma solução tecnológica que otimize as operações da farmácia e aprimore a experiência do cliente.
 
+# No arquivo original pede o uso de Design Thinking
+
+"Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema."
+
+# -------------------------------
+
 
 ## Objetivos
 
@@ -29,15 +35,19 @@ Além disso, o sistema também contribui para uma tomada de decisão embasada em
 
 ## Justificativa
 
-A escolha de criar um sistema de gestão para farmácias se baseia em diversas razões:
+#### A escolha de criar um sistema de gestão para farmácias se baseia em diversas razões:
 
-Necessidade de eficiência: A gestão manual de uma farmácia pode ser trabalhosa e sujeita a erros. Um sistema automatizado melhora a eficiência, permitindo que os funcionários foquem em atividades mais estratégicas.
+#### Necessidade de eficiência:
+A gestão manual de uma farmácia pode ser trabalhosa e sujeita a erros. Um sistema automatizado melhora a eficiência, permitindo que os funcionários foquem em atividades mais estratégicas.
 
-Competitividade de mercado: Em um mercado farmacêutico cada vez mais competitivo, é essencial adotar tecnologias que proporcionem vantagens competitivas. Um sistema de gestão eficaz pode diferenciar uma farmácia no mercado.
+#### Competitividade de mercado:
+Em um mercado farmacêutico cada vez mais competitivo, é essencial adotar tecnologias que proporcionem vantagens competitivas. Um sistema de gestão eficaz pode diferenciar uma farmácia no mercado.
 
-Compliance regulatório: As farmácias estão sujeitas a regulamentações rigorosas relacionadas ao controle de estoque, armazenamento de medicamentos e registros de vendas. Um sistema de gestão ajuda a garantir a conformidade com essas regulamentações, reduzindo o risco de penalidades legais.
+#### Compliance regulatório:
+As farmácias estão sujeitas a regulamentações rigorosas relacionadas ao controle de estoque, armazenamento de medicamentos e registros de vendas. Um sistema de gestão ajuda a garantir a conformidade com essas regulamentações, reduzindo o risco de penalidades legais.
 
-Melhoria na experiência do cliente: A satisfação do cliente é fundamental para o sucesso de qualquer negócio. Um sistema de gestão contribui para uma experiência de compra mais conveniente e satisfatória, o que pode levar à fidelização do cliente e à avaliação e divulgação positiva do negócio.
+#### Melhoria na experiência do cliente:
+A satisfação do cliente é fundamental para o sucesso de qualquer negócio. Um sistema de gestão contribui para uma experiência de compra mais conveniente e satisfatória, o que pode levar à fidelização do cliente e à avaliação e divulgação positiva do negócio.
 
 Em resumo, a criação de um sistema de gestão para farmácias é uma medida estratégica que visa melhorar a eficiência operacional, garantir conformidade regulatória, impulsionar a competitividade e proporcionar uma experiência superior ao cliente.
 
@@ -68,3 +78,9 @@ Joana - Farmacêutica Responsável;
 Pedro - Técnico de Farmácia;
 
 Maria - Gerente da Farmácia.
+
+# Ao meu ver o arquivo original pede algo mais visual também:
+
+Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+
+# ------------------------------------

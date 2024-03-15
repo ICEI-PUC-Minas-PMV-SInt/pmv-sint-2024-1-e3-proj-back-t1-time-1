@@ -12,14 +12,13 @@ A solução proposta visa a criação de um sistema de estoque robusto e intuiti
 
 ### Técnicas e Ferramentas Utilizadas:
 
-#### Definição de Personas:
+#### 1 - Definição de Personas:
 Serão elaborados três perfis de usuários representativos, permitindo uma compreensão mais profunda das necessidades e expectativas dos clientes.
-
-#### Histórias de Usuários:
+#### 2 - Histórias de Usuários:
 Serão criadas histórias que descrevem cenários específicos de uso do sistema, fornecendo insights sobre as funcionalidades necessárias.
-#### Requisitos Funcionais e Não Funcionais:
+#### 3 - Requisitos Funcionais e Não Funcionais:
 Serão identificados os requisitos relacionados às funções do sistema, bem como os requisitos de desempenho, segurança e usabilidade.
-#### Restrições do Projeto:
+#### 4 - Restrições do Projeto:
 Serão consideradas limitações como orçamento, prazos e recursos disponíveis, garantindo a viabilidade do projeto dentro de determinados parâmetros.
 
 Ao utilizar essas técnicas e ferramentas, buscamos garantir que o Sistema de Estoque para Farmácias seja desenvolvido de maneira eficaz, atendendo às necessidades dos usuários e superando os desafios enfrentados pelas farmácias na gestão de estoque.
