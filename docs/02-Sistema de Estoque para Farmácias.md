@@ -1,13 +1,13 @@
 # Sistema de Estoque para Farmácias
 
 Elaboração:
-•	Alessandra Gabriele Vataro da Silva Murat
-•	Camila Patrícia Ferreira dos Santos
-•	Celso Nunes Soares
-•	Gabriel Marco Ferreira Assis
-•	Gean Carlos Campos Bráz
-•	Laura Alice Santos Leite
-•	Wesley de Camargo Murat
+. Alessandra Gabriele Vataro da Silva Murat
+. Camila Patrícia Ferreira dos Santos
+.Celso Nunes Soares
+. Gabriel Marco Ferreira Assis
+. Gean Carlos Campos Bráz
+. Laura Alice Santos Leite
+. Wesley de Camargo Murat
 
 Orientador:
 •	Will Ricardo dos Santos Machado
