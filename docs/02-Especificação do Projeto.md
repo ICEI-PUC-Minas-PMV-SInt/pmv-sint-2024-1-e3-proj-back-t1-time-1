@@ -1,7 +1,5 @@
 # Sistema de Estoque para Farmácias
 
-<span style="color:red">Documento de visão do negócio <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
 Elaboração:
 •	Alessandra Gabriele Vataro da Silva Murat
 •	Camila Patrícia Ferreira dos Santos
