@@ -18,12 +18,6 @@ Em nossa análise da farmácia popular, identificamos um desafio crucial: a gest
 
 Nosso projeto se concentra em melhorar a eficiência operacional da farmácia popular, uma empresa comprometida em fornecer medicamentos e produtos de saúde a preços acessíveis para a comunidade. Em nosso contexto, reconhecemos a necessidade de cumprir as regulamentações específicas do setor, mantendo um inventário preciso e atualizado. Para isso, buscamos implementar uma solução tecnológica que otimize as operações da farmácia e aprimore a experiência do cliente.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
@@ -49,33 +43,28 @@ Em resumo, a criação de um sistema de gestão para farmácias é uma medida es
 
 ## Público-Alvo
 
-Farmacêuticos e Técnicos de Farmácia:
+### Farmacêuticos e Técnicos de Farmácia:
 
 Conhecimentos Prévios: Possuem conhecimentos sólidos sobre medicamentos, regulamentações da área farmacêutica e práticas de gestão de estoque.
 Relação com a Tecnologia: Alguns podem ter experiência básica em sistemas de computador, mas a maioria pode não ter familiaridade com tecnologias avançadas. No entanto, estão dispostos a aprender e usar novas ferramentas para melhorar a eficiência do trabalho.
 Relações Hierárquicas: Podem estar envolvidos em diferentes níveis hierárquicos, desde técnicos de nível básico até farmacêuticos responsáveis pela gestão geral da farmácia.
-Gerentes e Supervisores:
+
+### Gerentes e Supervisores:
 
 Conhecimentos Prévios: Têm conhecimento sobre operações de varejo, gestão de equipe e metas de negócios.
 Relação com a Tecnologia: Provavelmente têm mais familiaridade com sistemas de software e podem exigir recursos avançados para análise de dados e relatórios.
 Relações Hierárquicas: Responsáveis pela supervisão das operações da farmácia, tomada de decisões estratégicas e garantia de conformidade com as regulamentações.
-Clientes Internos e Externos:
+
+### Clientes Internos e Externos:
 
 Conhecimentos Prévios: Os clientes internos, como funcionários da farmácia, precisam entender os processos internos e o sistema para operá-lo eficientemente. Os clientes externos, os pacientes, podem não ter conhecimento técnico, mas esperam um atendimento rápido e eficiente.
 Relação com a Tecnologia: Os clientes internos precisam aprender a usar a aplicação para realizar suas tarefas diárias, enquanto os clientes externos podem interagir indiretamente através da eficiência no atendimento e disponibilidade de produtos.
 Relações Hierárquicas: Os clientes internos podem ter diferentes níveis de autoridade e responsabilidade na operação da farmácia, enquanto os clientes externos buscam um serviço de qualidade e confiabilidade.
-Mapa de Stakeholders:
 
-Diagramas de Personas:
+### Diagramas de Personas:
 
-Joana - Farmacêutica Responsável:
+Joana - Farmacêutica Responsável;
 
-Pedro - Técnico de Farmácia:
+Pedro - Técnico de Farmácia;
 
-Maria - Gerente da Farmácia:
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Maria - Gerente da Farmácia.

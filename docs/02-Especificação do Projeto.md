@@ -4,40 +4,31 @@
 
 Nesta seção do documento, abordaremos a criação de um Sistema de Estoque para Farmácias, com um foco primordial na perspectiva do usuário. Utilizaremos diversas técnicas e ferramentas para especificar o projeto de forma abrangente e precisa.
 
-Definição do Problema:
+#### Definição do Problema:
 O desafio principal é desenvolver um sistema que permita às farmácias gerenciar eficientemente seus medicamentos e produtos. Isso implica facilitar o controle de estoque, reduzir perdas devido ao vencimento de produtos e aprimorar a gestão financeira.
 
-Ideia de Solução:
+#### Ideia de Solução:
 A solução proposta visa a criação de um sistema de estoque robusto e intuitivo, capaz de atender às necessidades das farmácias de maneira abrangente. Isso inclui a implementação de funcionalidades que facilitem o controle de medicamentos vencidos, identificação da demanda de produtos e melhoria nos processos operacionais.
 
-Técnicas e Ferramentas Utilizadas:
+### Técnicas e Ferramentas Utilizadas:
 
-Definição de Personas: Serão elaborados três perfis de usuários representativos, permitindo uma compreensão mais profunda das necessidades e expectativas dos clientes.
-Histórias de Usuários: Serão criadas histórias que descrevem cenários específicos de uso do sistema, fornecendo insights sobre as funcionalidades necessárias.
-Requisitos Funcionais e Não Funcionais: Serão identificados os requisitos relacionados às funções do sistema, bem como os requisitos de desempenho, segurança e usabilidade.
-Restrições do Projeto: Serão consideradas limitações como orçamento, prazos e recursos disponíveis, garantindo a viabilidade do projeto dentro de determinados parâmetros.
+#### Definição de Personas:
+Serão elaborados três perfis de usuários representativos, permitindo uma compreensão mais profunda das necessidades e expectativas dos clientes.
+
+#### Histórias de Usuários:
+Serão criadas histórias que descrevem cenários específicos de uso do sistema, fornecendo insights sobre as funcionalidades necessárias.
+#### Requisitos Funcionais e Não Funcionais:
+Serão identificados os requisitos relacionados às funções do sistema, bem como os requisitos de desempenho, segurança e usabilidade.
+#### Restrições do Projeto:
+Serão consideradas limitações como orçamento, prazos e recursos disponíveis, garantindo a viabilidade do projeto dentro de determinados parâmetros.
+
 Ao utilizar essas técnicas e ferramentas, buscamos garantir que o Sistema de Estoque para Farmácias seja desenvolvido de maneira eficaz, atendendo às necessidades dos usuários e superando os desafios enfrentados pelas farmácias na gestão de estoque.
 
 ## Personas
 
-Maria Silva é a farmacêutica responsável pela gestão de medicamentos na farmácia popular. Ela precisa de um sistema que facilite o controle de estoque, permitindo-lhe verificar a disponibilidade de medicamentos, suas datas de validade e histórico de vendas. Maria Silva também precisa gerar relatórios para cumprir com as regulamentações governamentais e para auxiliar na decisão de quais medicamentos devem ser adquiridos.
-
 ![Personas](./img/Personas/persona_1.png)
 ![Personas](./img/Personas/persona_2.png)
 ![Personas](./img/Personas/persona_3.png)
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
->
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-> Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
 
 ## Histórias de Usuários
 
