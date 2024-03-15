@@ -88,17 +88,12 @@ Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Cla
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-| ID  | Restrição                                             |
-| --- | ----------------------------------------------------- |
-| 01  | O projeto deverá ser entregue até o final do semestre |
-| 02  | Não pode ser desenvolvido um módulo de backend        |
+| ID  | Restrição                                                                          |
+| --- | ---------------------------------------------------------------------------------- |
+| 01  | Orçamento limitado para desenvolvimento.                                           |
+| 02  | Prazo de implementação definido para 6 meses.                                      |
+| 03  | Necessidade de compatibilidade com diferentes dispositivos e sistemas operacionais.|
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
->
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
 
 ## Diagrama de Casos de Uso
 
