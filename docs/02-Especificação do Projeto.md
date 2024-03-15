@@ -1,4 +1,4 @@
-# Especificações do Projeto
+# Sistema de Estoque para Farmácias
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
