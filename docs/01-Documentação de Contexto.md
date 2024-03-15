@@ -13,9 +13,9 @@ Ter um sistema de gestão para farmácias projetado para otimizar e facilitar a 
 Ao oferecer uma solução abrangente e integrada, essa plataforma possibilita uma gestão mais ágil e eficaz, permitindo que os proprietários e gerentes concentrem seus esforços em outras áreas cruciais do negócio.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Em nossa análise da farmácia popular, identificamos um desafio crucial: a gestão ineficiente do estoque. Atualmente, a falta de um sistema adequado para controlar e organizar os produtos resulta em desperdício de recursos, escassez de itens essenciais e dificuldades para atender à demanda dos clientes de forma satisfatória. O processo manual de gestão do estoque é propenso a erros e falhas, afetando diretamente a operação diária da farmácia.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Nosso projeto se concentra em melhorar a eficiência operacional da farmácia popular, uma empresa comprometida em fornecer medicamentos e produtos de saúde a preços acessíveis para a comunidade. Em nosso contexto, reconhecemos a necessidade de cumprir as regulamentações específicas do setor, mantendo um inventário preciso e atualizado. Para isso, buscamos implementar uma solução tecnológica que otimize as operações da farmácia e aprimore a experiência do cliente.
 
 Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
@@ -48,10 +48,30 @@ Em resumo, a criação de um sistema de gestão para farmácias é uma medida es
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Farmacêuticos e Técnicos de Farmácia:
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
+Conhecimentos Prévios: Possuem conhecimentos sólidos sobre medicamentos, regulamentações da área farmacêutica e práticas de gestão de estoque.
+Relação com a Tecnologia: Alguns podem ter experiência básica em sistemas de computador, mas a maioria pode não ter familiaridade com tecnologias avançadas. No entanto, estão dispostos a aprender e usar novas ferramentas para melhorar a eficiência do trabalho.
+Relações Hierárquicas: Podem estar envolvidos em diferentes níveis hierárquicos, desde técnicos de nível básico até farmacêuticos responsáveis pela gestão geral da farmácia.
+Gerentes e Supervisores:
+
+Conhecimentos Prévios: Têm conhecimento sobre operações de varejo, gestão de equipe e metas de negócios.
+Relação com a Tecnologia: Provavelmente têm mais familiaridade com sistemas de software e podem exigir recursos avançados para análise de dados e relatórios.
+Relações Hierárquicas: Responsáveis pela supervisão das operações da farmácia, tomada de decisões estratégicas e garantia de conformidade com as regulamentações.
+Clientes Internos e Externos:
+
+Conhecimentos Prévios: Os clientes internos, como funcionários da farmácia, precisam entender os processos internos e o sistema para operá-lo eficientemente. Os clientes externos, os pacientes, podem não ter conhecimento técnico, mas esperam um atendimento rápido e eficiente.
+Relação com a Tecnologia: Os clientes internos precisam aprender a usar a aplicação para realizar suas tarefas diárias, enquanto os clientes externos podem interagir indiretamente através da eficiência no atendimento e disponibilidade de produtos.
+Relações Hierárquicas: Os clientes internos podem ter diferentes níveis de autoridade e responsabilidade na operação da farmácia, enquanto os clientes externos buscam um serviço de qualidade e confiabilidade.
+Mapa de Stakeholders:
+
+Diagramas de Personas:
+
+Joana - Farmacêutica Responsável:
+
+Pedro - Técnico de Farmácia:
+
+Maria - Gerente da Farmácia:
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)

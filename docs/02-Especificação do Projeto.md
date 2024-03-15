@@ -8,7 +8,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Maria Silva é a farmacêutica responsável pela gestão de medicamentos na farmácia popular. Ela precisa de um sistema que facilite o controle de estoque, permitindo-lhe verificar a disponibilidade de medicamentos, suas datas de validade e histórico de vendas. Maria Silva também precisa gerar relatórios para cumprir com as regulamentações governamentais e para auxiliar na decisão de quais medicamentos devem ser adquiridos.
 
 Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
 
@@ -29,8 +29,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 | EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
 | -------------------- | ---------------------------------- | -------------------------------------- |
-| Usuário do sistema   | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-| Administrador        | Alterar permissões                 | Permitir que possam administrar contas |
+| Ana Paula            | Registrar a entrada e saída de produtos no sistema de estoque           | Manter um controle atualizado dos medicamentos e produtos disponíveis               |
+| Carlos André         | Receber notificações automáticas quando os níveis de estoque de determinados produtos estiverem baixos                 | Poder fazer pedidos de reposição de forma eficiente |
+| Liana Alves          | Acessar relatórios detalhados sobre o desempenho do estoque da minha farmácia                 | Tomar decisões estratégicas e melhorar a gestão do negócio |
 
 Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
 
