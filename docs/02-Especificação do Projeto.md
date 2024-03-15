@@ -1,10 +1,18 @@
 # Sistema de Estoque para Farmácias
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
+<span style="color:red">Documento de visão do negócio <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
+Elaboração:
+•	Alessandra Gabriele Vataro da Silva Murat
+•	Camila Patrícia Ferreira dos Santos
+•	Celso Nunes Soares
+•	Gabriel Marco Ferreira Assis
+•	Gean Carlos Campos Bráz
+•	Laura Alice Santos Leite
+•	Wesley de Camargo Murat
 
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+Orientador:
+•	Will Ricardo dos Santos Machado
 
 ## Personas
 
