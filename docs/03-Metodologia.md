@@ -1,14 +1,29 @@
-
 # Metodologia
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
+<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
+Para a organização e gestão das tarefas no desenvolvimento do projeto, foi implementado um quadro Kanban através do Github, permitindo uma visão clara do andamento do projeto e facilitando a colaboração entre os membros da equipe.
+
+![Quadro Kanban](./img/quadro_kanban.png)
+
+Para as reuniões de equipe optamos pelo Microsoft Teams, que é o padrão utilizado pela nossa instituição de ensino, garantindo uma comunicação fluida e eficaz.
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+Para o desenvolvimento dos diagramas e das interfaces, utilizamos uma variedadede de ferramentas a qual cada membro tinha familiariedade e foram cruciais para a conclusão de cada item do quadro de atividades. Abaixo temos a tabela com as ferramentas utilizadas para cada item:
+
+| Atividade                           | Ferramenta                        | Acesso                                                                                                                                                                                                                                                 |
+| ----------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Gerenciamento de Tarefas            | Quadro Kanban integrado ao Github | https://github.com/orgs/ICEI-PUC-Minas-PMV-SInt/projects/22                                                                                                                                                                                            |
+| Edição de código          | Visual Studio | |
+| Comunicação da Equipe               | Microsoft Teams                   | https://teams.microsoft.com/l/meetup-join/19%3aXIzd_gG06yBtnGA3gplHkPJtPTsEyST6_k-eHiYlEpA1%40thread.tacv2/1678832324616?context=%7b%22Tid%22%3a%2214cbd5a7-ec94-46ba-b314-cc0fc972a161%22%2c%22Oid%22%3a%225fc47345-261d-4339-8223-030a4de9654b%22%7d |
+| Repositório de código fonte         | Git/Github                        | https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2024-1-e3-proj-back-t1-time-1                                                                                                                                                                      |
+| Interface da aplicação (Wireframes) | Figma                             | https://www.figma.com/file/gvKmO7C4IdLUisRMG8fd3N/Untitled?type=design&node-id=0%3A1&mode=design&t=vbHZWZU4OEUYRbKI-1                                                                                                                                  |
+| Diagrama de fluxo de navegação      |                                   |                                                                                                                                                                                                                                                        |
+| Diagrama de classes                 | Visual Studio - Class Design      |                                                                                                                                                                                                                                                        |
+| Diagrama de caso de uso             |                                   | https://lucid.app/lucidchart/6da65c8b-acf1-4114-a42c-abc1b75bdc51/edit?viewport_loc=148%2C-2747%2C1156%2C577%2C0_0&invitationId=inv_ab4462fb-6c96-49ff-8a67-a5e8f4267d6e                                                                               |
+
+https://lucid.app/lucidchart/6da65c8b-acf1-4114-a42c-abc1b75bdc51/edit?viewport_loc=148%2C-2747%2C1156%2C577%2C0_0&invitationId=inv_ab4462fb-6c96-49ff-8a67-a5e8f4267d6e |
 
 ## Controle de Versão
 
@@ -31,57 +46,21 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
-
-> **Links Úteis**:
-> - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
->  - [Comparando fluxos de trabalho](https://www.atlassian.com/br/git/tutorials/comparing-workflows)
-> - [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-> - [The gitflow workflow - in less than 5 mins](https://www.youtube.com/watch?v=1SXpE08hvGs)
-
 ## Gerenciamento de Projeto
 
 ### Divisão de Papéis
 
-Apresente a divisão de papéis entre os membros do grupo.
+A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
+- Scrum Master: Gean Carlos Campos Bráz;
+- Product Owner: Gabriel Marco Ferreira Assis;
+- Equipe de Desenvolvimento: Camila Patrícia Ferreira dos Santos, Celso Nunes Soares e Laura Alice Santos Leite;
+- Equipe de Design: Alessandra Gabriele Vataro da Silva Murat e Wesley de Camargo Murat.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
- 
-> **Links Úteis**:
-> - [Planejamento e Gestáo Ágil de Projetos](https://pucminas.instructure.com/courses/87878/pages/unidade-2-tema-2-utilizacao-de-ferramentas-para-controle-de-versoes-de-software)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/issues/organizing-your-work-with-project-boards/managing-project-boards/about-project-boards)
-> - [Project management, made simple](https://github.com/features/project-management/)
-> - [Sobre quadros de projeto](https://docs.github.com/pt/github/managing-your-work-on-github/about-project-boards)
-> - [Como criar Backlogs no Github](https://www.youtube.com/watch?v=RXEy6CFu9Hk)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+Com base nas orientações em aula, criamos uma sprint para cada etapa do projeto, associando issues que são as habilidades a serem avaliadas. A cada final de sprint, as issues são fechadas para a conclusão da sprint na data agendada.
 
-### Ferramentas
+Ao longo de cada sprint foram determinadas 2 reuniões síncronas, sendo uma com o orientador do projeto (Will Ricardo dos Santos Machado) e outra com a equipe para mapear o que cada membro está desenvolvendo e compartilhar possíveis impedimentos para discussão/solução. E contatos assincronos para manter o projeto dentro do cronograma preestabelecido.
 
-As ferramentas empregadas no projeto são:
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
-
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
-
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
- 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
