@@ -2,56 +2,105 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
-
-![Arquitetura da Solução](img/arch-back.JPG)
+Definição de como o software é estruturado em termos dos componentes que fazem parte da solução.
 
 ## Diagrama de Classes
 
-O diagrama de classes ilustra graficamente como será a estrutura do software, e como cada uma das classes da sua estrutura estarão interligadas. Essas classes servem de modelo para materializar os objetos que executarão na memória.
+```mermaid
+classDiagram
+  Category "1" -- "1" Supplier
+  Category "1..*" -- "*" Medicine
+  Supplier "1" -- "1" Location
+  Medicine "1..*" -- "*" Order
+  Order "*" -- "1" Client
+  Client "*" -- "1" Location
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
+  class Category{
+    -int Id
+    -string Name
+    +Category(int id, string name)
+    +setId(int id)
+    +getId() int
+    +setName(string name)
+    +getName() string
+  }
 
-> - [Diagramas de Classes - Documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.6.1?topic=diagrams-class)
-> - [O que é um diagrama de classe UML? | Lucidchart](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+  class Supplier{
+    -int Id
+    -string Name
+    -Location Location
+    +Supplier(int id, string name, Location location)
+    +setId(int id)
+    +getId() int
+    +setName(string name)
+    +getName() string
+    +setLocation(Location location)
+    +getLocation() Location
+  }
 
-## Modelo ER
+  class Medicine{
+    -int Id
+    -Category Category
+    -Supplier Supplier
+    -int Quantity
+    -float Price
+    +Medicine(string id, Category category, Supplier supplier, int quantity, float price)
+    +setId(int id)
+    +getId() int
+    +setSupplier(Supplier supplier)
+    +getSupplier() Supplier
+    +setCategory(Category category)
+    +getCategory() Category
+  }
 
-O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.]
+  class Order{
+    -int Id
+    -DateTime Date
+    -List~Medicine~ Medicine
+    -Client Client
+    +Order(int id, DateTime date, List~Medicine~ medicine, Client client)
+    +setId(int id)
+    +getId() int
+    +setDate(DateTime date)
+    +getDate() DateTime
+    +setMedicines(List~Medicine~ medicines)
+    +getMedicines() List~Medicines~
+    +setClient(Client client)
+    +getClient() Client
+  }
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER”.
+  class Client{
+    -int Cpf
+    -string Name
+    -int Phone
+    -Location Location
+    +Client(int cpf, string name, string address, int phone, Location location)
+    +setCpf(int cpf)
+    +getCpf() int
+    +setName(string name)
+    +getName() string
+    +setPhone(int phone)
+    +getPhone() int
+    +setLocation(Location location)
+    +getLocation() Location
+  }
 
-> - [Como fazer um diagrama entidade relacionamento | Lucidchart](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
+  class Location{
+    -int Id
+    -string Name
+    +Location(int id, string name)
+    +setId(int id)
+    +getId() int
+    +setName(string name)
+    +getName() string
+  }
+```
 
-## Esquema Relacional
+Acima está um protótipo do diagrama de classes e seu esquema relacional. Note que todo o esquema é passível de alterações a medida que o projeto for desenvolvido!
 
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
-
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
-
-## Modelo Físico (DDL)
-
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
-
-## Instruções SQL de Manipulação do BD (DML)
-
-Entregar um arquivo dml.sql contendo os scripts de manipulação de banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
-
-## Tecnologias Utilizadas
-
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
-
-## Hospedagem
-
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+- `Category`: Categoria do produto
+- `Supplier`: Fornecedor do produto
+- `Medicine`: O produto em si (medicamento, entre outros)
+- `Order`: O pedido de um produto
+- `Client`: Cliente registrado com nome e endereço
+- `Location`: Usado em `Client` e `Supplier`, para identificação em comum de localizações
