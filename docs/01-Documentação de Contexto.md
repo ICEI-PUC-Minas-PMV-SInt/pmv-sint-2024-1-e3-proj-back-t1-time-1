@@ -18,12 +18,6 @@ Em nossa análise da farmácia popular, identificamos um desafio crucial: a gest
 
 Nosso projeto se concentra em melhorar a eficiência operacional da farmácia popular, uma empresa comprometida em fornecer medicamentos e produtos de saúde a preços acessíveis para a comunidade. Em nosso contexto, reconhecemos a necessidade de cumprir as regulamentações específicas do setor, mantendo um inventário preciso e atualizado. Para isso, buscamos implementar uma solução tecnológica que otimize as operações da farmácia e aprimore a experiência do cliente.
 
-# No arquivo original pede o uso de Design Thinking
-
-"Nesse momento, o grupo pode optar por fazer uso de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema."
-
-# -------------------------------
-
 
 ## Objetivos
 
@@ -78,9 +72,3 @@ Joana - Farmacêutica Responsável;
 Pedro - Técnico de Farmácia;
 
 Maria - Gerente da Farmácia.
-
-# Ao meu ver o arquivo original pede algo mais visual também:
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-# ------------------------------------
