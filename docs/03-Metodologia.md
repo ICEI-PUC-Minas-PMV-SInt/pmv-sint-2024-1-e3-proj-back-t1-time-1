@@ -21,7 +21,7 @@ Para o desenvolvimento dos diagramas e das interfaces, utilizamos uma variedaded
 | Interface da aplicação (Wireframes) | Figma                             | https://www.figma.com/file/gvKmO7C4IdLUisRMG8fd3N/Untitled?type=design&node-id=0%3A1&mode=design&t=vbHZWZU4OEUYRbKI-1                                                                                                                                  |
 | Diagrama de fluxo de navegação      |                                   |                                                                                                                                                                                                                                                        |
 | Diagrama de classes                 | Visual Studio - Class Design      |                                                                                                                                                                                                                                                        |
-| Diagrama de caso de uso             |                                   |https://lucid.app/lucidchart/4c579cf8-7875-49df-a01d-9927da18e836/edit?viewport_loc=-1233%2C-1689%2C4385%2C2189%2C0_0&invitationId=inv_846fcdbc-0632-44d4-9d7d-f322c724128a                                                                            |
+| Diagrama de caso de uso             | Lucid Chart                                   |https://lucid.app/lucidchart/4c579cf8-7875-49df-a01d-9927da18e836/edit?viewport_loc=-1233%2C-1689%2C4385%2C2189%2C0_0&invitationId=inv_846fcdbc-0632-44d4-9d7d-f322c724128a                                                                            |
 
 
 ## Controle de Versão
