@@ -35,9 +35,9 @@ Com base na análise das personas foram identificadas as seguintes histórias de
 
 | EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
 | -------------------- | ---------------------------------- | -------------------------------------- |
-| Maria Silva          | Registrar a entrada e saída de produtos no sistema de estoque.                                          | Manter um controle atualizado dos medicamentos e produtos disponíveis. |
-| João Santos          | Receber notificações automáticas quando os níveis de estoque de determinados produtos estiverem baixos. | Poder fazer pedidos de reposição de forma eficiente.                   |
-| Ana Oliveira         | Acessar relatórios detalhados sobre o desempenho do estoque da minha farmácia.                          | Acessar informações sobre os medicamentos utilizados regularmente, economizando tempo e evitando deslocamentos desnecessários.            |
+| Maria Silva          | Registrar a entrada e saída de produtos no sistema de estoque, realizando atualizações e visualizando de forma clara os produtos, fornecedores e clientes.                                          | Manter um controle atualizado dos medicamentos e produtos disponíveis. |
+| João Santos          | Receber notificações automáticas quando os níveis de estoque de determinados produtos estiverem baixos e verificar o estoque atual. | Poder fazer pedidos de reposição de forma eficiente para evitar falta ou excesso de estoque.                   |
+| Ana Oliveira         | Acessar relatórios detalhados sobre o desempenho do estoque da farmácia.                          | Acessar uma litsa completa dos produtos para verificar informações sobre os medicamentos utilizados regularmente, economizando tempo e evitando deslocamentos desnecessários.            |
 
 
 ## Requisitos
