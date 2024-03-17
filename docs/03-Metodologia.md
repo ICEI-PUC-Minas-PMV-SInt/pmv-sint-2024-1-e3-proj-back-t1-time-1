@@ -21,9 +21,9 @@ Para o desenvolvimento dos diagramas e das interfaces, utilizamos uma variedaded
 | Interface da aplicação (Wireframes) | Figma                             | https://www.figma.com/file/gvKmO7C4IdLUisRMG8fd3N/Untitled?type=design&node-id=0%3A1&mode=design&t=vbHZWZU4OEUYRbKI-1                                                                                                                                  |
 | Diagrama de fluxo de navegação      |                                   |                                                                                                                                                                                                                                                        |
 | Diagrama de classes                 | Visual Studio - Class Design      |                                                                                                                                                                                                                                                        |
-| Diagrama de caso de uso             |                                   | https://lucid.app/lucidchart/6da65c8b-acf1-4114-a42c-abc1b75bdc51/edit?viewport_loc=148%2C-2747%2C1156%2C577%2C0_0&invitationId=inv_ab4462fb-6c96-49ff-8a67-a5e8f4267d6e                                                                               |
+| Diagrama de caso de uso             |                                   | https://lucid.app/lucidchart/6da65c8b-acf1-4114-a42c-abc1b75bdc51/edit?viewport_loc=148%2C-2747%2C1156%2C577%2C0_0&invitationId=inv_ab4462fb-6c96-49ff-8a67-a5e8f4267d6e   
+https://lucid.app/lucidchart/6da65c8b-acf1-4114-a42c-abc1b75bdc51/edit?viewport_loc=148%2C-2747%2C1156%2C577%2C0_0&invitationId=inv_ab4462fb-6c96-49ff-8a67-a5e8f4267d6e                                                                             |
 
-https://lucid.app/lucidchart/6da65c8b-acf1-4114-a42c-abc1b75bdc51/edit?viewport_loc=148%2C-2747%2C1156%2C577%2C0_0&invitationId=inv_ab4462fb-6c96-49ff-8a67-a5e8f4267d6e |
 
 ## Controle de Versão
 
