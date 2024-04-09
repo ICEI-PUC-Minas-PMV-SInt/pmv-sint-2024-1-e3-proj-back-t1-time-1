@@ -95,6 +95,6 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 ## Diagrama de Casos de Uso
 
-![Diarama UML](./img/Diagramas/uml_part_1.png)
-![Diarama UML](./img/Diagramas/uml_part_2.png)
+![Diarama UML](./img/Diagramas/uml.png)
+
 
