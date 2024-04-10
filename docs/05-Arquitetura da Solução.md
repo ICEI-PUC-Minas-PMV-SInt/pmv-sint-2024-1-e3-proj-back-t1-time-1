@@ -105,5 +105,8 @@ Acima está um protótipo do diagrama de classes e seu esquema relacional. Note 
 - `Client`: Cliente registrado com nome e endereço
 - `Location`: Usado em `Client` e `Supplier`, para identificação em comum de localizações
 
-## Outros detalhes
-Em 17/04/2024, ainda não foi decidido se o projeto será feito em uma arquitetura monolítica ou de microsserviços, nem a linguagem de programação em si.
+## MER
+
+![Tela - Login](./img/Diagramas/MER.jpg)
+
+

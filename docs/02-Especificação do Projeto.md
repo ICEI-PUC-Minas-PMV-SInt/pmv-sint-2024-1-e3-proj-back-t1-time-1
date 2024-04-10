@@ -5,20 +5,29 @@
 Nesta seção do documento, abordaremos a criação de um Sistema de Estoque para Farmácias, com um foco primordial na perspectiva do usuário. Utilizaremos diversas técnicas e ferramentas para especificar o projeto de forma abrangente e precisa.
 
 ### Definição do Problema:
+
 O desafio principal é desenvolver um sistema que permita às farmácias gerenciar eficientemente seus medicamentos e produtos. Isso implica facilitar o controle de estoque, reduzir perdas devido ao vencimento de produtos e aprimorar a gestão financeira.
 
 ### Ideia de Solução:
+
 A solução proposta visa a criação de um sistema de estoque robusto e intuitivo, capaz de atender às necessidades das farmácias de maneira abrangente. Isso inclui a implementação de funcionalidades que facilitem o controle de medicamentos vencidos, identificação da demanda de produtos e melhoria nos processos operacionais.
 
 ### Técnicas e Ferramentas Utilizadas:
 
 #### 1 - Definição de Personas:
+
 Serão elaborados três perfis de usuários representativos, permitindo uma compreensão mais profunda das necessidades e expectativas dos clientes.
+
 #### 2 - Histórias de Usuários:
+
 Serão criadas histórias que descrevem cenários específicos de uso do sistema, fornecendo insights sobre as funcionalidades necessárias.
+
 #### 3 - Requisitos Funcionais e Não Funcionais:
+
 Serão identificados os requisitos relacionados às funções do sistema, bem como os requisitos de desempenho, segurança e usabilidade.
+
 #### 4 - Restrições do Projeto:
+
 Serão consideradas limitações como orçamento, prazos e recursos disponíveis, garantindo a viabilidade do projeto dentro de determinados parâmetros.
 
 Ao utilizar essas técnicas e ferramentas, buscamos garantir que o Sistema de Estoque para Farmácias seja desenvolvido de maneira eficaz, atendendo às necessidades dos usuários e superando os desafios enfrentados pelas farmácias na gestão de estoque.
@@ -33,12 +42,11 @@ Ao utilizar essas técnicas e ferramentas, buscamos garantir que o Sistema de Es
 
 Com base na análise das personas foram identificadas as seguintes histórias de usuários:
 
-| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE` | PARA ... `MOTIVO/VALOR`                |
-| -------------------- | ---------------------------------- | -------------------------------------- |
-| Maria Silva          | Registrar a entrada e saída de produtos no sistema de estoque, realizando atualizações e visualizando de forma clara os produtos, fornecedores e clientes.                                          | Manter um controle atualizado dos medicamentos e produtos disponíveis. |
-| João Santos          | Receber notificações automáticas quando os níveis de estoque de determinados produtos estiverem baixos e verificar o estoque atual. | Poder fazer pedidos de reposição de forma eficiente para evitar falta ou excesso de estoque.                   |
-| Ana Oliveira         | Acessar relatórios detalhados sobre o desempenho do estoque da farmácia.                          | Acessar uma litsa completa dos produtos para verificar informações sobre os medicamentos utilizados regularmente, economizando tempo e evitando deslocamentos desnecessários.            |
-
+| EU COMO... `PERSONA` | QUERO/PRECISO ... `FUNCIONALIDADE`                                                                                                                         | PARA ... `MOTIVO/VALOR`                                                                                                                                                       |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Maria Silva          | Registrar a entrada e saída de produtos no sistema de estoque, realizando atualizações e visualizando de forma clara os produtos, fornecedores e clientes. | Manter um controle atualizado dos medicamentos e produtos disponíveis.                                                                                                        |
+| João Santos          | Receber notificações automáticas quando os níveis de estoque de determinados produtos estiverem baixos e verificar o estoque atual.                        | Poder fazer pedidos de reposição de forma eficiente para evitar falta ou excesso de estoque.                                                                                  |
+| Ana Oliveira         | Acessar relatórios detalhados sobre o desempenho do estoque da farmácia.                                                                                   | Acessar uma litsa completa dos produtos para verificar informações sobre os medicamentos utilizados regularmente, economizando tempo e evitando deslocamentos desnecessários. |
 
 ## Requisitos
 
@@ -86,15 +94,12 @@ Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Cla
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-| ID  | Restrição                                                                          |
-| --- | ---------------------------------------------------------------------------------- |
-| 01  | Orçamento limitado para desenvolvimento.                                           |
-| 02  | Prazo de implementação definido para 6 meses.                                      |
-| 03  | Necessidade de compatibilidade com diferentes dispositivos e sistemas operacionais.|
-
+| ID  | Restrição                                                                           |
+| --- | ----------------------------------------------------------------------------------- |
+| 01  | Orçamento limitado para desenvolvimento.                                            |
+| 02  | Prazo de implementação definido para 6 meses.                                       |
+| 03  | Necessidade de compatibilidade com diferentes dispositivos e sistemas operacionais. |
 
 ## Diagrama de Casos de Uso
 
-![Diarama UML](./img/Diagramas/uml.png)
-
-
+![Diagrama UML](./img/Diagramas/uml.png)
