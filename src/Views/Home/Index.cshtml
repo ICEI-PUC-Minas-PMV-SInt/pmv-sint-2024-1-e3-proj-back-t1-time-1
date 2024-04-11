@@ -1,0 +1,28 @@
+﻿@using System.Security.Claims;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Pharma</h1>
+    <p>Título <i>extremamente criativo</i></p>
+    <p>Obviamente iremos mudar a página principal depois. No momento adicionem apenas as tabelas</p>
+    <p>Também, eventualmente, iremos restringir certas telas para usuários e cargos específicos, não se preocupe com
+        isso agora.</p>
+
+    <h2>No momento você 
+        @if (User.Identity.IsAuthenticated)
+        {
+            var cargo = User.Claims
+                            .Where(t => t.Type == ClaimTypes.Role)
+                            .Select(r => r.Value)
+                            .FirstOrDefault();
+
+            <i>está logado como um @cargo.</i>
+        }
+        else
+        {
+            <i>não está logado.</i>
+        }
+    </h2>
+</div>

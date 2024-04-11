@@ -1,0 +1,7 @@
+# pastas para ignorar
+# geralmente de build
+node_modules
+bin
+
+# ENV variables, caso chegue a utilizar
+.env
