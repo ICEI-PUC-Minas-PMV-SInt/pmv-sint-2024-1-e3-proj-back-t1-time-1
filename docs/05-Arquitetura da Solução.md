@@ -109,4 +109,6 @@ Acima está um protótipo do diagrama de classes e seu esquema relacional. Note 
 
 ![Tela - Login](./img/Diagramas/MER.jpg)
 
+Acesse o [Miro]([https://git-scm.com/](https://miro.com/welcomeonboard/VnlDdGNVZUFaQjB1RjhMRGNNYlRaUmEyeHI1VHI0dUlFUUdXZkVCTXhSMHpDYUNhZjByaWgzdVdmNk9zUm9DZHwzNDU4NzY0NTE4ODYxOTQzOTcxfDI=?share_link_id=441335340737)) para uma visualização mais precisa e detalhada do diagrama.
+
 
