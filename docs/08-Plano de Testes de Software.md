@@ -2,7 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
 
-Os testes funcionais realizados serão realizados para simular o acesso ao site. Será testada a página de login de acesso do usuário, descrito no Caso de Teste CT-01. Nesse cenário, a página será testada por um dos membros da equipe. 
+Os testes funcionais serão realizados para simular o acesso ao site. Será testada a página de login de acesso do usuário, descrito no Caso de Teste CT-01. Nesse cenário, a página será testada por um dos membros da equipe. 
 
 Os testes funcionais realizados no site estão descritos a seguir.
 
