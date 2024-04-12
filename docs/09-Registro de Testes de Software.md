@@ -14,11 +14,11 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 > |Caso de Teste|CT-01||
 > |-------------|-----|----|
 > |Critérios de êxito|Avaliação|Observações|
-> |A página de login é carregada corretamente.|Sucesso||
-> |O usuário é autenticado com sucesso pelo sistema.|Sucesso||
-> |Após o login, a página inicial é carregada.|Sucesso||
-> |O botão de logoff está acessível na página carregada.|Sucesso||
-> |Após o logoff, a página de login é carregada novamente.|Sucesso||
+> |A página de login é carregada corretamente.|Sucesso|A página foi carregada sem problemas.|
+> |O usuário é autenticado com sucesso pelo sistema.|Sucesso|As credenciais foram aceitas e o usuário foi autenticado.|
+> |Após o login, a página inicial é carregada.|Sucesso|A página inicial foi carregada após a autenticação do usuário.|
+> |O botão de logoff está acessível na página carregada.|Sucesso|O botão de logoff estava presente e funcional.|
+> |Após o logoff, a página de login é carregada novamente.|Sucesso|Após o logoff, a página de login foi carregada conforme esperado.|
 > 
 > |Caso de Teste|CT-02||
 > |-------------|-----|----|
