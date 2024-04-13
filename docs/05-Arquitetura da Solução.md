@@ -2,7 +2,7 @@
 
 <span style="color:red">Pré-requisitos: <a href="04-Projeto de Interface.md"> Projeto de Interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução.
+![Estrutura](./img/arquitetura.png)
 
 ## Diagrama de Classes
 
@@ -105,11 +105,35 @@ Acima está um protótipo do diagrama de classes e seu esquema relacional. Note 
 - `Client`: Cliente registrado com nome e endereço
 - `Location`: Usado em `Client` e `Supplier`, para identificação em comum de localizações
 
-## MER
+---
 
-![MER](./img/Diagramas/MER.jpg)
+## Modelo ER
 
-<span style="color:red">Acesse o <a href="[https://miro.com/app/board/uXjVKWYIxGU=/](https://miro.com/app/board/uXjVKWYIxGU=/?share_link_id=402646098372)">Miro</a> para uma visualização mais precisa e detalhada dos diagramas</span>
+### Identificação de entidades
 
+- Pessoa
+- Usuário
+- Cliente
+- Fornecedor
+- Produto
+- Categoria Produto
+- Localização
+- Pedido Cliente
+- Item Pedido
+- Pedido Compra
+- Item Compra
+- Movimentação Estoque
 
+  ![MER](./img/Diagramas/MER.jpg)
 
+<span style="color:red">Acesse o <a href="https://miro.com/app/board/uXjVKWYIxGU=/?share_link_id=402646098372">Miro</a> para uma visualização mais precisa e detalhada dos diagramas</span>
+
+## Esquema Relacional
+
+## Modelo Físico (DDL)
+
+O arquivo relacionado ao modelo físico se encontra em:
+
+## Instruções SQL de Manipulação do BD (DML)
+
+O arquivo relacionado ao as instruções SQL de Manipulação de BD se encontra em:
