@@ -107,8 +107,9 @@ Acima está um protótipo do diagrama de classes e seu esquema relacional. Note 
 
 ## MER
 
-![Tela - Login](./img/Diagramas/MER.jpg)
+![MER](./img/Diagramas/MER.jpg)
 
-Acesse o [Miro]([https://git-scm.com/](https://miro.com/welcomeonboard/VnlDdGNVZUFaQjB1RjhMRGNNYlRaUmEyeHI1VHI0dUlFUUdXZkVCTXhSMHpDYUNhZjByaWgzdVdmNk9zUm9DZHwzNDU4NzY0NTE4ODYxOTQzOTcxfDI=?share_link_id=441335340737)) para uma visualização mais precisa e detalhada do diagrama.
+<span style="color:red">Acesse o <a href="[3-Projeto de Interface.md](https://miro.com/app/board/uXjVKWYIxGU=/)">Miro para uma visualização mais precisa e detalhada dos diagramas</a></span>
+
 
 
