@@ -23,5 +23,9 @@ namespace Pharma.Models
         [ForeignKey("PedidoCliente")]
         public int IdPedido { get; set; }
         public virtual PedidoCliente PedidoCliente { get; set;}
+
+        // [ForeignKey("Produto")]
+        // public int IdProduto { get; set; }
+        // public virtual Produto Produto { get; set; }
     }
 }
