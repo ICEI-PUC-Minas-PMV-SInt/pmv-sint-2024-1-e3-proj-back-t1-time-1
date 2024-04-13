@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel\\Documents\\Fun\\csharp\\puc\\Pharma\\Pharma.csproj": {}
+    "D:\\PUC\\3° Período\\Repo\\pmv-sint-2024-1-e3-proj-back-t1-time-1\\src\\Pharma.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel\\Documents\\Fun\\csharp\\puc\\Pharma\\Pharma.csproj": {
+    "D:\\PUC\\3° Período\\Repo\\pmv-sint-2024-1-e3-proj-back-t1-time-1\\src\\Pharma.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel\\Documents\\Fun\\csharp\\puc\\Pharma\\Pharma.csproj",
+        "projectUniqueName": "D:\\PUC\\3° Período\\Repo\\pmv-sint-2024-1-e3-proj-back-t1-time-1\\src\\Pharma.csproj",
         "projectName": "Pharma",
-        "projectPath": "C:\\Users\\Gabriel\\Documents\\Fun\\csharp\\puc\\Pharma\\Pharma.csproj",
-        "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel\\Documents\\Fun\\csharp\\puc\\Pharma\\obj\\",
+        "projectPath": "D:\\PUC\\3° Período\\Repo\\pmv-sint-2024-1-e3-proj-back-t1-time-1\\src\\Pharma.csproj",
+        "packagesPath": "C:\\Users\\gean6\\.nuget\\packages\\",
+        "outputPath": "D:\\PUC\\3° Período\\Repo\\pmv-sint-2024-1-e3-proj-back-t1-time-1\\src\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gean6\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
