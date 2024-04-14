@@ -5,7 +5,7 @@ namespace Pharma.Models
 
 {
     [Table("Categorias")]
-    public class Categorias
+    public class Categoria
     {
         [Key]
         public int Id_categoria { get; set; }
