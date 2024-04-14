@@ -16,5 +16,7 @@ namespace Pharma.Models
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<ItemPedido> ItensPedido { get; set; }
         public DbSet<Localizacao> Localizacoes { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
+
     }
 }

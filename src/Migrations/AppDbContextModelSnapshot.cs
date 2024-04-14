@@ -108,6 +108,25 @@ namespace Pharma.Migrations
 
                 });
 
+            modelBuilder.Entity("Pharma.Models.Categoria", b =>
+                {
+                    b.Property<int>("Id_categoria")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DescricaoCategoria")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NomeCategoria")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id_categoria");
+
+                    b.ToTable("Categorias");
+                });
+
             modelBuilder.Entity("Pharma.Models.Usuario", b =>
                 {
                     b.Property<int>("Id")
