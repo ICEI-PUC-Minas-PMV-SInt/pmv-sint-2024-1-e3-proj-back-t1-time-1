@@ -128,12 +128,23 @@ Acima está um protótipo do diagrama de classes e seu esquema relacional. Note 
 
 <span style="color:red">Acesse o <a href="https://miro.com/app/board/uXjVKWYIxGU=/?share_link_id=402646098372">Miro</a> para uma visualização mais precisa e detalhada dos diagramas</span>
 
-## Esquema Relacional
+## Modelo Relacional
+
+  ![Modelo Relacional](./img/Diagramas/Modelo%20Relacional.jpg)
+
+
+<span >Acesse o <a href="https://miro.com/app/board/uXjVKWYIxGU=/?share_link_id=402646098372">Miro</a> para uma visualização mais precisa e detalhada dos diagramas</span>
+
 
 ## Modelo Físico (DDL)
 
 O arquivo relacionado ao modelo físico se encontra em:
 
+<span ><a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2024-1-e3-proj-back-t1-time-1/blob/main/src/bd/script_ddl.sql">DDL</a></span>
+
+
 ## Instruções SQL de Manipulação do BD (DML)
 
 O arquivo relacionado ao as instruções SQL de Manipulação de BD se encontra em:
+
+<span ><a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2024-1-e3-proj-back-t1-time-1/blob/main/src/bd/script.dml.sql">DML</a></span>
