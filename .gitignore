@@ -8,3 +8,4 @@ obj
 
 # ENV variables, caso chegue a utilizar
 .env
+.vs/

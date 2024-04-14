@@ -22,4 +22,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Views\PedidoClientes\Create.cshtml" />
+    <None Include="Views\PedidoClientes\Delete.cshtml" />
+    <None Include="Views\PedidoClientes\Details.cshtml" />
+    <None Include="Views\PedidoClientes\Edit.cshtml" />
+    <None Include="Views\PedidoClientes\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
