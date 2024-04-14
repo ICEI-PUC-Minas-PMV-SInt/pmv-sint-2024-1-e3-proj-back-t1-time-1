@@ -10,7 +10,7 @@ namespace Pharma.Models
         public int Id_localizacao { get; set; }
         [Required(ErrorMessage = "Obrigatório informar o nome da localização")]
         public string NomeLocalizacao { get; set; }
-        [Required(ErrorMessage = "Obrigatório informar o nome da localização")]
+        [Required(ErrorMessage = "Obrigatório informar a descrição da localização")]
         public string DescricaoLocalizacao { get; set; }
         [Required(ErrorMessage = "Obrigatório informar a capacidade")]
         public int Capacidade { get; set; }
