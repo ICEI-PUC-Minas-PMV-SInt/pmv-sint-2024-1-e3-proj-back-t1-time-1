@@ -126,7 +126,6 @@ Acima está um protótipo do diagrama de classes e seu esquema relacional. Note 
 
   ![MER](./img/Diagramas/MER.jpg)
 
-<span style="color:red">Acesse o <a href="https://miro.com/app/board/uXjVKWYIxGU=/?share_link_id=402646098372">Miro</a> para uma visualização mais precisa e detalhada dos diagramas</span>
 
 ## Modelo Relacional
 
