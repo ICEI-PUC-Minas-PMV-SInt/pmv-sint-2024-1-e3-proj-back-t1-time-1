@@ -82,6 +82,30 @@ namespace Pharma.Migrations
                     b.HasIndex("IdCliente");
 
                     b.ToTable("PedidosClientes");
+
+                });
+
+            modelBuilder.Entity("Pharma.Models.Localizacao", b =>
+                {
+                    b.Property<int>("Id_localizacao")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Capacidade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("DescricaoLocalizacao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NomeLocalizacao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id_localizacao");
+
+                    b.ToTable("Localizacoes");
+
                 });
 
             modelBuilder.Entity("Pharma.Models.Usuario", b =>
