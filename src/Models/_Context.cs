@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace Pharma.Models
 {
@@ -9,5 +10,6 @@ namespace Pharma.Models
         // O nome da variável para as tabelas sempre serão no plural!
         // Enquanto a classe do modelo em si é sempre no singular
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Localizacao> Localizacoes { get; set; }
     }
 }
