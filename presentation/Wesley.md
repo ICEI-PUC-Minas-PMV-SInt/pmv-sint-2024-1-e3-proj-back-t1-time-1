@@ -12,3 +12,5 @@ E também no uso das tabelas intermediárias para relacionamentos de muitos para
 ## Aprendizados
 
 Acompanhando as aulas de desenvolvimento backend eu consegui em paralelo ir replicando os exemplos demonstrado, com isso pude consolidar os conhecimentos da arquitetura MVC bem como toda a instalação e configuração de todo ambiente de desenvolvimento utilizando as ferramentas sugeridas pelo professor.
+
+https://github.com/T4RUM/mf-dev-backend-2024
