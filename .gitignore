@@ -1,8 +1,10 @@
 # pastas para ignorar
 # geralmente de build
+**/.vs/
+**/.vscode/
 node_modules
 bin
+obj
 
 # ENV variables, caso chegue a utilizar
 .env
-.vs/

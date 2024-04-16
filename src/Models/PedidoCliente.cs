@@ -8,15 +8,19 @@ namespace Pharma.Models
     public class PedidoCliente
     {
         [Key]
+        [Display(Name = "Id do Pedido")]
         public int IdPedido { get; set; }
 
         [Required]
+        [Display(Name = "Data do pedido")]
         public DateTime DtPedido { get; set; }
         
         [Required]
+        [Display(Name = "Nota Fiscal")]
         public string NtFiscal { get; set; }
 
         [Required]
+        [Display(Name = "Total do Pedido")]
         public decimal TotalPedido { get; set; }
 
         [ForeignKey("Cliente")]

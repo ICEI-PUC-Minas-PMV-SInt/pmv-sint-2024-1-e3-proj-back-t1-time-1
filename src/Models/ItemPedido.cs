@@ -12,12 +12,15 @@ namespace Pharma.Models
         public int IdItemProduto { get; set; }
 
         [Required]
+        [Display(Name = "Quantidade de produtos")]
         public int QtProduto { get; set; }
 
         [Required]
+        [Display(Name = "Valor Unitário")]
         public decimal VlUnitario { get; set; }
 
         [Required]
+        [Display(Name = "Valor Total")]
         public decimal VlTotalItem { get; set; }
 
         [ForeignKey("PedidoCliente")]

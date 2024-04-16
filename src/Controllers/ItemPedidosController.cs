@@ -9,23 +9,23 @@ using Pharma.Models;
 
 namespace Pharma.Controllers
 {
-    public class PedidoClientesController : Controller
+    public class ItemPedidosController : Controller
     {
         private readonly AppDbContext _context;
 
-        public PedidoClientesController(AppDbContext context)
+        public ItemPedidosController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: PedidoClientes
+        // GET: ItemPedidoes
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.PedidoCliente.Include(p => p.Cliente);
+            var appDbContext = _context.ItensPedido.Include(i => i.PedidoCliente);
             return View(await appDbContext.ToListAsync());
         }
 
-        // GET: PedidoClientes/Details/5
+        // GET: ItemPedidoes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,42 +33,42 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var pedidoCliente = await _context.PedidoCliente
-                .Include(p => p.Cliente)
-                .FirstOrDefaultAsync(m => m.IdPedido == id);
-            if (pedidoCliente == null)
+            var itemPedido = await _context.ItensPedido
+                .Include(i => i.PedidoCliente)
+                .FirstOrDefaultAsync(m => m.IdItemProduto == id);
+            if (itemPedido == null)
             {
                 return NotFound();
             }
 
-            return View(pedidoCliente);
+            return View(itemPedido);
         }
 
-        // GET: PedidoClientes/Create
+        // GET: ItemPedidoes/Create
         public IActionResult Create()
         {
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente");
+            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal");
             return View();
         }
 
-        // POST: PedidoClientes/Create
+        // POST: ItemPedidoes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdPedido,DtPedido,NtFiscal,TotalPedido,IdCliente")] PedidoCliente pedidoCliente)
+        public async Task<IActionResult> Create([Bind("IdItemProduto,QtProduto,VlUnitario,VlTotalItem,IdPedido")] ItemPedido itemPedido)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(pedidoCliente);
+                _context.Add(itemPedido);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", pedidoCliente.IdCliente);
-            return View(pedidoCliente);
+            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal", itemPedido.IdPedido);
+            return View(itemPedido);
         }
 
-        // GET: PedidoClientes/Edit/5
+        // GET: ItemPedidoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -76,23 +76,23 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var pedidoCliente = await _context.PedidoCliente.FindAsync(id);
-            if (pedidoCliente == null)
+            var itemPedido = await _context.ItensPedido.FindAsync(id);
+            if (itemPedido == null)
             {
                 return NotFound();
             }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", pedidoCliente.IdCliente);
-            return View(pedidoCliente);
+            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal", itemPedido.IdPedido);
+            return View(itemPedido);
         }
 
-        // POST: PedidoClientes/Edit/5
+        // POST: ItemPedidoes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdPedido,DtPedido,NtFiscal,TotalPedido,IdCliente")] PedidoCliente pedidoCliente)
+        public async Task<IActionResult> Edit(int id, [Bind("IdItemProduto,QtProduto,VlUnitario,VlTotalItem,IdPedido")] ItemPedido itemPedido)
         {
-            if (id != pedidoCliente.IdPedido)
+            if (id != itemPedido.IdItemProduto)
             {
                 return NotFound();
             }
@@ -101,12 +101,12 @@ namespace Pharma.Controllers
             {
                 try
                 {
-                    _context.Update(pedidoCliente);
+                    _context.Update(itemPedido);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PedidoClienteExists(pedidoCliente.IdPedido))
+                    if (!ItemPedidoExists(itemPedido.IdItemProduto))
                     {
                         return NotFound();
                     }
@@ -117,11 +117,11 @@ namespace Pharma.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente", pedidoCliente.IdCliente);
-            return View(pedidoCliente);
+            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal", itemPedido.IdPedido);
+            return View(itemPedido);
         }
 
-        // GET: PedidoClientes/Delete/5
+        // GET: ItemPedidoes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,35 +129,35 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var pedidoCliente = await _context.PedidoCliente
-                .Include(p => p.Cliente)
-                .FirstOrDefaultAsync(m => m.IdPedido == id);
-            if (pedidoCliente == null)
+            var itemPedido = await _context.ItensPedido
+                .Include(i => i.PedidoCliente)
+                .FirstOrDefaultAsync(m => m.IdItemProduto == id);
+            if (itemPedido == null)
             {
                 return NotFound();
             }
 
-            return View(pedidoCliente);
+            return View(itemPedido);
         }
 
-        // POST: PedidoClientes/Delete/5
+        // POST: ItemPedidoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var pedidoCliente = await _context.PedidoCliente.FindAsync(id);
-            if (pedidoCliente != null)
+            var itemPedido = await _context.ItensPedido.FindAsync(id);
+            if (itemPedido != null)
             {
-                _context.PedidoCliente.Remove(pedidoCliente);
+                _context.ItensPedido.Remove(itemPedido);
             }
 
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool PedidoClienteExists(int id)
+        private bool ItemPedidoExists(int id)
         {
-            return _context.PedidoCliente.Any(e => e.IdPedido == id);
+            return _context.ItensPedido.Any(e => e.IdItemProduto == id);
         }
     }
 }
