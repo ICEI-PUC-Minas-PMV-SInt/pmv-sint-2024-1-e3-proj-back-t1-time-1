@@ -42,5 +42,7 @@ namespace Pharma.Models
         /// </summary>
         [Required(ErrorMessage = "O usuário precisa ser um administrador ou um farmacêutico!")]
         public Cargos Cargo { get; set; }
+
+        public ICollection<Localizacao> Localizacoes { get; set; }
     }
 }
