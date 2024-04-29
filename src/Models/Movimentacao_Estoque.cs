@@ -7,9 +7,12 @@ namespace Pharma.Models
     public class MovimentacaoEstoque
     {
         [Key]
+        [Display(Name = "Id da Movimentação")]
         public int IdMovimentacao { get; set; }
 
-        
+        //[ForeignKey("ItemCompra")]
+        //public int IdItemCompra { get; set; }
+        //public virtual ItemCompra ItemCompra { get; set; }
 
         [ForeignKey("ItemPedido")]
         public int IdItemPedido { get; set; }
