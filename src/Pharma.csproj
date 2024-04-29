@@ -38,6 +38,11 @@
     <None Include="Views\ItemPedidos\Details.cshtml" />
     <None Include="Views\ItemPedidos\Edit.cshtml" />
     <None Include="Views\ItemPedidos\Index.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Create.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Delete.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Details.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Edit.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Index.cshtml" />
     <None Include="Views\PedidoClientes\Create.cshtml" />
     <None Include="Views\PedidoClientes\Delete.cshtml" />
     <None Include="Views\PedidoClientes\Details.cshtml" />
