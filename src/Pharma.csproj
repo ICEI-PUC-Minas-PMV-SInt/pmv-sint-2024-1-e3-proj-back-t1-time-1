@@ -28,6 +28,11 @@
     <None Include="Views\PedidoClientes\Details.cshtml" />
     <None Include="Views\PedidoClientes\Edit.cshtml" />
     <None Include="Views\PedidoClientes\Index.cshtml" />
+    <None Include="Views\Produtos\Create.cshtml" />
+    <None Include="Views\Produtos\Delete.cshtml" />
+    <None Include="Views\Produtos\Details.cshtml" />
+    <None Include="Views\Produtos\Edit.cshtml" />
+    <None Include="Views\Produtos\Index.cshtml" />
   </ItemGroup>
 
 </Project>

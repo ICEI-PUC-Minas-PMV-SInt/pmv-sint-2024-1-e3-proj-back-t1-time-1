@@ -10,19 +10,19 @@ namespace Pharma.Models
         public int IdProduto { get; set; }
 
 
-        [ForeignKey("Usuario")]
-        public int IdUsuario { get; set; }
-        public virtual Usuario Usuario { get; set; }
+        //[ForeignKey("Usuario")]
+        //public int IdUsuario { get; set; }
+        //public virtual Usuario Usuario { get; set; }
 
 
-        [ForeignKey("Categorias")]
-        public int IdCategoria { get; set; }
-        public virtual Categoria Categoria   { get; set; }
+       // [ForeignKey("Categorias")]
+       // public int IdCategoria { get; set; }
+       // public virtual Categoria Categoria   { get; set; }
 
 
-        [ForeignKey("Localizacoes")]
-        public int IdLocalizacao  { get; set; }
-        public virtual Localizacao Localizacao { get; set; }
+       // [ForeignKey("Localizacoes")]
+        //public int IdLocalizacao  { get; set; }
+        //public virtual Localizacao Localizacao { get; set; }
 
 
         public string NomeProduto { get; set; }

@@ -11,7 +11,7 @@ using Pharma.Models;
 namespace Pharma.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240502003450_M8-AddTableProdutos")]
+    [Migration("20240502012247_M8-AddTableProdutos.")]
     partial class M8AddTableProdutos
     {
         /// <inheritdoc />

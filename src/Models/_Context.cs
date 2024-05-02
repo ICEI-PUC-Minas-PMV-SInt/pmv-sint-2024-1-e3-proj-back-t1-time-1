@@ -1,4 +1,4 @@
-
+﻿
 ﻿using Microsoft.EntityFrameworkCore;
 using Pharma.Models;
 using System.Collections.Generic;
@@ -17,6 +17,7 @@ namespace Pharma.Models
         public DbSet<ItemPedido> ItensPedido { get; set; }
         public DbSet<Localizacao> Localizacoes { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Pharma.Models.Produtos> Produtos { get; set; }
 
     }
 }
