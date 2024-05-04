@@ -18,10 +18,14 @@
             <th>
                 @Html.DisplayNameFor(model => model.DescricaoCategoria)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Usuario)
-            </th>
-            <th></th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.Usuario)
+                </th>
+            }
+            
+            <th class="text-center">Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -33,13 +37,17 @@
             <td>
                 @Html.DisplayFor(modelItem => item.DescricaoCategoria)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usuario.AcessoUsuario)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id_categoria">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id_categoria">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id_categoria">Delete</a>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario.AcessoUsuario)
+                    </td>
+                }
+      
+            <td class="text-center">
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id_categoria">Editar</a> 
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id_categoria">Detalhes</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id_categoria">Excluir</a>
             </td>
         </tr>
 }
