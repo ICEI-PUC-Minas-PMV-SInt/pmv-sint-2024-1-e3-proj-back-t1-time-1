@@ -99,5 +99,58 @@ namespace Pharma.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            var dados = await _context.Categorias.Include(c => c.Usuario)
+        .FirstAsync(c => c.Id_categoria == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+            ViewBag.AcessoUsuario = dados.Usuario.AcessoUsuario;
+            return View(dados);
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var dados = await _context.Categorias.Include(c => c.Usuario)
+        .FirstAsync(c => c.Id_categoria == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+            ViewBag.AcessoUsuario = dados.Usuario.AcessoUsuario;
+            return View(dados);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var dados = await _context.Categorias.Include(c => c.Usuario)
+        .FirstAsync(c => c.Id_categoria == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+
+            _context.Categorias.Remove(dados);
+            await _context.SaveChangesAsync();
+
+
+            return RedirectToAction("Index");
+        }
     }
 }
