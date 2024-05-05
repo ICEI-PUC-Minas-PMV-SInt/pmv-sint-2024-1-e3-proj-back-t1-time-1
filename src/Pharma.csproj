@@ -23,6 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Localizacoes\Create.cshtml" />
+    <None Include="Views\Localizacoes\Edit.cshtml" />
+    <None Include="Views\Localizacoes\Index.cshtml" />
     <None Include="Views\PedidoClientes\Create.cshtml" />
     <None Include="Views\PedidoClientes\Delete.cshtml" />
     <None Include="Views\PedidoClientes\Details.cshtml" />
