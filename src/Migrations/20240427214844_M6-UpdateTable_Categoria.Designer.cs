@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Pharma.Models;
 
@@ -10,9 +11,11 @@ using Pharma.Models;
 namespace Pharma.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240427214844_M6-UpdateTable_Categoria")]
+    partial class M6UpdateTable_Categoria
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.4");
@@ -99,12 +102,7 @@ namespace Pharma.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UsuarioId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id_localizacao");
-
-                    b.HasIndex("UsuarioId");
 
                     b.ToTable("Localizacoes");
                 });
@@ -190,17 +188,6 @@ namespace Pharma.Migrations
                     b.Navigation("PedidoCliente");
                 });
 
-            modelBuilder.Entity("Pharma.Models.Localizacao", b =>
-                {
-                    b.HasOne("Pharma.Models.Usuario", "Usuario")
-                        .WithMany("Localizacoes")
-                        .HasForeignKey("UsuarioId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Usuario");
-                });
-
             modelBuilder.Entity("Pharma.Models.PedidoCliente", b =>
                 {
                     b.HasOne("Pharma.Models.Cliente", "Cliente")
@@ -215,11 +202,6 @@ namespace Pharma.Migrations
             modelBuilder.Entity("Pharma.Models.Usuario", b =>
                 {
                     b.Navigation("Categorias");
-                });
-
-            modelBuilder.Entity("Pharma.Models.Usuario", b =>
-                {
-                    b.Navigation("Localizacoes");
                 });
 #pragma warning restore 612, 618
         }

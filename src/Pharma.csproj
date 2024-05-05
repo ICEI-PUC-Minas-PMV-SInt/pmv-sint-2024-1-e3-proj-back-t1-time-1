@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <Watch Include="**\*.cshtml;*.razor;*.js;*.css" Exclude="**\obj\**\*;bin\**\*" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
@@ -23,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Categorias\Create.cshtml" />
+    <None Include="Views\Categorias\Edit.cshtml" />
+    <None Include="Views\Categorias\Index.cshtml" />
     <None Include="Views\Localizacoes\Create.cshtml" />
     <None Include="Views\Localizacoes\Edit.cshtml" />
     <None Include="Views\Localizacoes\Index.cshtml" />
