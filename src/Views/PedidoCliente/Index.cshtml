@@ -4,14 +4,17 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Pedidos de clientes</h1>
+<h1>Pedidos de Clientes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Criar novo pedido</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdPedido)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.DtPedido)
             </th>

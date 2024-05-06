@@ -12,7 +12,7 @@ namespace Pharma.Models
         public int IdPedido { get; set; }
 
         [Required]
-        [Display(Name = "Data do pedido")]
+        [Display(Name = "Data do Pedido")]
         public DateTime DtPedido { get; set; }
         
         [Required]

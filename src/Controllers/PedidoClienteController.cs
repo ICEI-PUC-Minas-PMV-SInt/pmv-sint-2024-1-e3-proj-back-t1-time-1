@@ -9,23 +9,23 @@ using Pharma.Models;
 
 namespace Pharma.Controllers
 {
-    public class PedidoClientesController : Controller
+    public class PedidoClienteController : Controller
     {
         private readonly AppDbContext _context;
 
-        public PedidoClientesController(AppDbContext context)
+        public PedidoClienteController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: PedidoClientes
+        // GET: PedidoCliente
         public async Task<IActionResult> Index()
         {
             var appDbContext = _context.PedidoCliente.Include(p => p.Cliente);
             return View(await appDbContext.ToListAsync());
         }
 
-        // GET: PedidoClientes/Details/5
+        // GET: PedidoCliente/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -44,14 +44,14 @@ namespace Pharma.Controllers
             return View(pedidoCliente);
         }
 
-        // GET: PedidoClientes/Create
+        // GET: PedidoCliente/Create
         public IActionResult Create()
         {
             ViewData["IdCliente"] = new SelectList(_context.Clientes, "IdCliente", "IdCliente");
             return View();
         }
 
-        // POST: PedidoClientes/Create
+        // POST: PedidoCliente/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -68,7 +68,7 @@ namespace Pharma.Controllers
             return View(pedidoCliente);
         }
 
-        // GET: PedidoClientes/Edit/5
+        // GET: PedidoCliente/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -85,7 +85,7 @@ namespace Pharma.Controllers
             return View(pedidoCliente);
         }
 
-        // POST: PedidoClientes/Edit/5
+        // POST: PedidoCliente/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -121,7 +121,7 @@ namespace Pharma.Controllers
             return View(pedidoCliente);
         }
 
-        // GET: PedidoClientes/Delete/5
+        // GET: PedidoCliente/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -140,7 +140,7 @@ namespace Pharma.Controllers
             return View(pedidoCliente);
         }
 
-        // POST: PedidoClientes/Delete/5
+        // POST: PedidoCliente/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
