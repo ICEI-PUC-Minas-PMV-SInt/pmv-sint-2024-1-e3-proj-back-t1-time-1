@@ -27,6 +27,15 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios"
                                     asp-action="Index">Usuários</a>
                             </li>
+                         
+                        }
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                         
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Categorias"
+                                   asp-action="Index">Categorias</a>
+                            </li>
                         }
                     </ul>
                     <ul class="navbar-nav">

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Pharma.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Categorias";
+}
+
+<h1>Categorias</h1>
+
+<p>
+    <a class="btn bg-primary text-white" asp-action="Create">Cadastrar Categoria</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCategoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DescricaoCategoria)
+            </th>
+            @if (User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.Usuario)
+                </th>
+            }
+            
+            <th class="text-center">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoCategoria)
+            </td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario.AcessoUsuario)
+                    </td>
+                }
+      
+            <td class="text-center">
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id_categoria">Editar</a> 
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id_categoria">Detalhes</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id_categoria">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

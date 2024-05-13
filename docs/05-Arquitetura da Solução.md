@@ -1,8 +1,8 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
+<span style="color:red">Pré-requisitos: <a href="04-Projeto de Interface.md"> Projeto de Interface</a></span>
 
-Definição de como o software é estruturado em termos dos componentes que fazem parte da solução.
+![Estrutura](./img/arquitetura.png)
 
 ## Diagrama de Classes
 
@@ -105,10 +105,45 @@ Acima está um protótipo do diagrama de classes e seu esquema relacional. Note 
 - `Client`: Cliente registrado com nome e endereço
 - `Location`: Usado em `Client` e `Supplier`, para identificação em comum de localizações
 
-## MER
+---
 
-![Tela - Login](./img/Diagramas/MER.jpg)
+## Modelo ER
 
-Acesse o [Miro]([https://git-scm.com/](https://miro.com/welcomeonboard/VnlDdGNVZUFaQjB1RjhMRGNNYlRaUmEyeHI1VHI0dUlFUUdXZkVCTXhSMHpDYUNhZjByaWgzdVdmNk9zUm9DZHwzNDU4NzY0NTE4ODYxOTQzOTcxfDI=?share_link_id=441335340737)) para uma visualização mais precisa e detalhada do diagrama.
+### Identificação de entidades
+
+- Pessoa
+- Usuário
+- Cliente
+- Fornecedor
+- Produto
+- Categoria Produto
+- Localização
+- Pedido Cliente
+- Item Pedido
+- Pedido Compra
+- Item Compra
+- Movimentação Estoque
+
+  ![MER](./img/Diagramas/MER.jpg)
 
 
+## Modelo Relacional
+
+  ![Modelo Relacional](./img/Diagramas/Modelo%20Relacional.jpg)
+
+
+<span >Acesse o <a href="https://miro.com/app/board/uXjVKWYIxGU=/?share_link_id=402646098372">Miro</a> para uma visualização mais precisa e detalhada dos diagramas</span>
+
+
+## Modelo Físico (DDL)
+
+O arquivo relacionado ao modelo físico se encontra em:
+
+<span ><a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2024-1-e3-proj-back-t1-time-1/blob/main/src/bd/script_ddl.sql">DDL</a></span>
+
+
+## Instruções SQL de Manipulação do BD (DML)
+
+O arquivo relacionado ao as instruções SQL de Manipulação de BD se encontra em:
+
+<span ><a href="https://github.com/ICEI-PUC-Minas-PMV-SInt/pmv-sint-2024-1-e3-proj-back-t1-time-1/blob/main/src/bd/script.dml.sql">DML</a></span>
