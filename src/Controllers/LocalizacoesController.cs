@@ -69,7 +69,7 @@ namespace Pharma.Controllers
        [HttpPost]
        public async Task<IActionResult> Edit(int id, Localizacao localizacao)
         {
-            if(id != localizacao.Id_localizacao)
+            if(id != localizacao.IdLocalizacao)
             {
                 return NotFound();
             }
@@ -82,6 +82,56 @@ namespace Pharma.Controllers
             }
 
             return View();
+        }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var dados = await _context.Localizacoes.Include(loc => loc.Usuario).FirstAsync(loc => loc.IdLocalizacao == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+            return View(dados);
+        }
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var dados = await _context.Localizacoes.Include(c => c.Usuario)
+        .FirstAsync(c => c.IdLocalizacao == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+            return View(dados);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfirmed(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var dados = await _context.Localizacoes.Include(c => c.Usuario)
+        .FirstAsync(c => c.IdLocalizacao == id);
+            if (dados == null)
+            {
+                return NotFound();
+            }
+
+            _context.Localizacoes.Remove(dados);
+            await _context.SaveChangesAsync();
+
+
+            return RedirectToAction("Index");
         }
     }
 }

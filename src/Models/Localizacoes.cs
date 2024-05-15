@@ -7,7 +7,7 @@ namespace Pharma.Models
     public class Localizacao
     {
         [Key]
-        public int Id_localizacao { get; set; }
+        public int IdLocalizacao { get; set; }
         [Required(ErrorMessage = "Obrigatório informar o nome da localização")]
         [Display(Name = "Nome da Localização")]
         public string NomeLocalizacao { get; set; }
