@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <Watch Include="**\*.cshtml;*.razor;*.js;*.css" Exclude="**\obj\**\*;bin\**\*" />
+    <Compile Remove="Controllers\PedidoClientesController.cs" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -24,6 +25,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Clientes\Create.cshtml" />
+    <None Include="Views\Clientes\Delete.cshtml" />
+    <None Include="Views\Clientes\Details.cshtml" />
+    <None Include="Views\Clientes\Edit.cshtml" />
+    <None Include="Views\Clientes\Index.cshtml" />
+    <None Include="Views\ItemPedidos\Create.cshtml" />
+    <None Include="Views\ItemPedidos\Delete.cshtml" />
+    <None Include="Views\ItemPedidos\Details.cshtml" />
+    <None Include="Views\ItemPedidos\Edit.cshtml" />
+    <None Include="Views\ItemPedidos\Index.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Create.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Delete.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Details.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Edit.cshtml" />
+    <None Include="Views\MovimentacaoEstoques\Index.cshtml" />
+    <None Include="Views\PedidoCliente\Create.cshtml" />
+    <None Include="Views\PedidoCliente\Delete.cshtml" />
+    <None Include="Views\PedidoCliente\Details.cshtml" />
+    <None Include="Views\PedidoCliente\Edit.cshtml" />
+    <None Include="Views\PedidoCliente\Index.cshtml" />
     <None Include="Views\Categorias\Create.cshtml" />
     <None Include="Views\Categorias\Delete.cshtml" />
     <None Include="Views\Categorias\Details.cshtml" />

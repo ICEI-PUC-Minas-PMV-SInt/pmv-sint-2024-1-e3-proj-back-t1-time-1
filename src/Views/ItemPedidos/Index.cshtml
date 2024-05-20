@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Pharma.Models.ItemPedido>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Itens de pedidos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar novo cadastro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdItemProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QtProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VlUnitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VlTotalItem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PedidoCliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdItemProduto)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VlUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VlTotalItem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PedidoCliente.NtFiscal)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdItemProduto" class="btn btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdItemProduto" class="btn btn-info">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdItemProduto" class="btn btn-danger">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

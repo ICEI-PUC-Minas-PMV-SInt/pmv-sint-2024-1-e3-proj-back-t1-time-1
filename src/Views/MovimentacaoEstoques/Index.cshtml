@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Pharma.Models.MovimentacaoEstoque>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Movimentações do Estoque</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar nova movimentação</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdMovimentacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QtProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TpMovimentacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DtMovimentacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdMovimentacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemPedido.IdItemProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TpMovimentacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DtMovimentacao)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdMovimentacao" class="btn btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdMovimentacao" class="btn btn-info">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdMovimentacao" class="btn btn-danger">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

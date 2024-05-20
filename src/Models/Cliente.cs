@@ -7,6 +7,7 @@ namespace Pharma.Models
     public class Cliente
     {
         [Key]
+        [Display(Name = "Id do Cliente")]
         public int IdCliente { get; set; }
 
         // [ForeignKey("Pessoa")]

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Pharma.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Clientes</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Criar novo cadastro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario.AcessoUsuario)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCliente" class="btn btn-dark">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCliente" class="btn btn-info">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCliente" class="btn btn-danger">Apagar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
