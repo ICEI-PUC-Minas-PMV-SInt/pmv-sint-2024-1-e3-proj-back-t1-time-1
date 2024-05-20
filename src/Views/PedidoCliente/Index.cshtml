@@ -7,7 +7,7 @@
 <h1>Pedidos de Clientes</h1>
 
 <p>
-    <a asp-action="Create">Criar novo pedido</a>
+    <a asp-action="Create" class="btn btn-primary">Criar novo pedido</a>
 </p>
 <table class="table">
     <thead>
@@ -46,9 +46,9 @@
                 @Html.DisplayFor(modelItem => item.Cliente.IdCliente)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdPedido">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdPedido">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdPedido">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdPedido" class="btn btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdPedido" class="btn btn-info">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdPedido" class="btn btn-danger">Apagar</a>
             </td>
         </tr>
 }

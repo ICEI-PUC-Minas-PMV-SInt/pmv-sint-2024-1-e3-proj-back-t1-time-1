@@ -7,7 +7,7 @@
 <h1>Movimentações do Estoque</h1>
 
 <p>
-    <a asp-action="Create">Criar nova movimentação</a>
+    <a asp-action="Create" class="btn btn-primary">Criar nova movimentação</a>
 </p>
 <table class="table">
     <thead>
@@ -49,9 +49,9 @@
                 @Html.DisplayFor(modelItem => item.DtMovimentacao)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdMovimentacao">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.IdMovimentacao">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdMovimentacao">Apagar</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdMovimentacao" class="btn btn-dark">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdMovimentacao" class="btn btn-info">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdMovimentacao" class="btn btn-danger">Apagar</a>
             </td>
         </tr>
 }
