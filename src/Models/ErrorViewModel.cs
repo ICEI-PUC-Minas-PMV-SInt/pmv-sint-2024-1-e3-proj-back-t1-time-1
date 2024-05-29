@@ -1,4 +1,4 @@
-namespace Pharma.Models;
+namespace src.Models;
 
 public class ErrorViewModel
 {

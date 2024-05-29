@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,14 +18,14 @@ namespace Pharma.Controllers
             _context = context;
         }
 
-        // GET: ItemPedidoes
+        // GET: ItemPedidos
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.ItensPedido.Include(i => i.PedidoCliente);
+            var appDbContext = _context.ItemPedido.Include(i => i.PedidosCliente);
             return View(await appDbContext.ToListAsync());
         }
 
-        // GET: ItemPedidoes/Details/5
+        // GET: ItemPedidos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,9 +33,9 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var itemPedido = await _context.ItensPedido
-                .Include(i => i.PedidoCliente)
-                .FirstOrDefaultAsync(m => m.IdItemProduto == id);
+            var itemPedido = await _context.ItemPedido
+                .Include(i => i.PedidosCliente)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (itemPedido == null)
             {
                 return NotFound();
@@ -44,19 +44,19 @@ namespace Pharma.Controllers
             return View(itemPedido);
         }
 
-        // GET: ItemPedidoes/Create
+        // GET: ItemPedidos/Create
         public IActionResult Create()
         {
-            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal");
+            ViewData["PedidoClienteId"] = new SelectList(_context.PedidoCliente, "Id", "NotaFiscal");
             return View();
         }
 
-        // POST: ItemPedidoes/Create
+        // POST: ItemPedidos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdItemProduto,QtProduto,VlUnitario,VlTotalItem,IdPedido")] ItemPedido itemPedido)
+        public async Task<IActionResult> Create([Bind("Id,Quantidade,ValorUnitario,ValorTotal,PedidoClienteId")] ItemPedido itemPedido)
         {
             if (ModelState.IsValid)
             {
@@ -64,11 +64,11 @@ namespace Pharma.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal", itemPedido.IdPedido);
+            ViewData["PedidoClienteId"] = new SelectList(_context.PedidoCliente, "Id", "NotaFiscal", itemPedido.PedidoClienteId);
             return View(itemPedido);
         }
 
-        // GET: ItemPedidoes/Edit/5
+        // GET: ItemPedidos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -76,23 +76,23 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var itemPedido = await _context.ItensPedido.FindAsync(id);
+            var itemPedido = await _context.ItemPedido.FindAsync(id);
             if (itemPedido == null)
             {
                 return NotFound();
             }
-            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal", itemPedido.IdPedido);
+            ViewData["PedidoClienteId"] = new SelectList(_context.PedidoCliente, "Id", "NotaFiscal", itemPedido.PedidoClienteId);
             return View(itemPedido);
         }
 
-        // POST: ItemPedidoes/Edit/5
+        // POST: ItemPedidos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdItemProduto,QtProduto,VlUnitario,VlTotalItem,IdPedido")] ItemPedido itemPedido)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Quantidade,ValorUnitario,ValorTotal,PedidoClienteId")] ItemPedido itemPedido)
         {
-            if (id != itemPedido.IdItemProduto)
+            if (id != itemPedido.Id)
             {
                 return NotFound();
             }
@@ -106,7 +106,7 @@ namespace Pharma.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ItemPedidoExists(itemPedido.IdItemProduto))
+                    if (!ItemPedidoExists(itemPedido.Id))
                     {
                         return NotFound();
                     }
@@ -117,11 +117,11 @@ namespace Pharma.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdPedido"] = new SelectList(_context.PedidoCliente, "IdPedido", "NtFiscal", itemPedido.IdPedido);
+            ViewData["PedidoClienteId"] = new SelectList(_context.PedidoCliente, "Id", "NotaFiscal", itemPedido.PedidoClienteId);
             return View(itemPedido);
         }
 
-        // GET: ItemPedidoes/Delete/5
+        // GET: ItemPedidos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -129,9 +129,9 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var itemPedido = await _context.ItensPedido
-                .Include(i => i.PedidoCliente)
-                .FirstOrDefaultAsync(m => m.IdItemProduto == id);
+            var itemPedido = await _context.ItemPedido
+                .Include(i => i.PedidosCliente)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (itemPedido == null)
             {
                 return NotFound();
@@ -140,15 +140,15 @@ namespace Pharma.Controllers
             return View(itemPedido);
         }
 
-        // POST: ItemPedidoes/Delete/5
+        // POST: ItemPedidos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var itemPedido = await _context.ItensPedido.FindAsync(id);
+            var itemPedido = await _context.ItemPedido.FindAsync(id);
             if (itemPedido != null)
             {
-                _context.ItensPedido.Remove(itemPedido);
+                _context.ItemPedido.Remove(itemPedido);
             }
 
             await _context.SaveChangesAsync();
@@ -157,7 +157,7 @@ namespace Pharma.Controllers
 
         private bool ItemPedidoExists(int id)
         {
-            return _context.ItensPedido.Any(e => e.IdItemProduto == id);
+            return _context.ItemPedido.Any(e => e.Id == id);
         }
     }
 }

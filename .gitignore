@@ -2,9 +2,13 @@
 # geralmente de build
 **/.vs/
 **/.vscode/
-node_modules
-bin
-obj
+node_modules/
+bin/
+obj/
+Migrations/
+Data.db
+Data.db-shm
+Data.db-wal
 
 # ENV variables, caso chegue a utilizar
 .env

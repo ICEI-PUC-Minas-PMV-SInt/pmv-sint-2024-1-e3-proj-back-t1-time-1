@@ -1,34 +1,27 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pharma.Models
 {
-    [Table("ItemsPedidos")]
+    [Table("ItemPedido")]
     public class ItemPedido
     {
         [Key]
-        public int IdItemProduto { get; set; }
+        public int Id { get; set; }
 
-        [Required]
-        [Display(Name = "Quantidade de produtos")]
-        public int QtProduto { get; set; }
+        [Required(ErrorMessage = "A quantidade do pedido é obrigatória!")]
+        public int Quantidade { get; set; }
 
-        [Required]
-        [Display(Name = "Valor Unitário")]
-        public decimal VlUnitario { get; set; }
+        [Required(ErrorMessage = "O valor da unidade é obrigatório!")]
+        [Display(Name = "Valor unitário")]
+        public decimal ValorUnitario { get; set; }
 
-        [Required]
-        [Display(Name = "Valor Total")]
-        public decimal VlTotalItem { get; set; }
+        [Required(ErrorMessage = "O valor total não pode ser nulo!")]
+        [Display(Name = "Valor total")]
+        public decimal ValorTotal { get; set; }
 
         [ForeignKey("PedidoCliente")]
-        public int IdPedido { get; set; }
-        public virtual PedidoCliente PedidoCliente { get; set;}
-
-        // [ForeignKey("Produto")]
-        // public int IdProduto { get; set; }
-        // public virtual Produto Produto { get; set; }
+        public int PedidoClienteId { get; set; }
+        public virtual PedidoCliente PedidosCliente { get; set; }
     }
 }

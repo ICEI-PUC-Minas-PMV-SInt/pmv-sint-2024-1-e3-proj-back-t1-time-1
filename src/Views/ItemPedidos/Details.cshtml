@@ -1,42 +1,42 @@
-﻿@model Pharma.Models.ItemPedido
+@model Pharma.Models.ItemPedido
 
 @{
     ViewData["Title"] = "Details";
 }
 
-<h1>Detalhes</h1>
+<h1>Details</h1>
 
 <div>
-    <h4>Itens de pedidos</h4>
+    <h4>ItemPedido</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.QtProduto)
+            @Html.DisplayNameFor(model => model.Quantidade)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.QtProduto)
+            @Html.DisplayFor(model => model.Quantidade)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VlUnitario)
+            @Html.DisplayNameFor(model => model.ValorUnitario)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VlUnitario)
+            @Html.DisplayFor(model => model.ValorUnitario)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.VlTotalItem)
+            @Html.DisplayNameFor(model => model.ValorTotal)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.VlTotalItem)
+            @Html.DisplayFor(model => model.ValorTotal)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PedidoCliente)
+            @Html.DisplayNameFor(model => model.PedidosCliente)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PedidoCliente.NtFiscal)
+            @Html.DisplayFor(model => model.PedidosCliente.NotaFiscal)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.IdItemProduto" class="btn btn-success">Editar</a> |
-    <a asp-action="Index" class="btn btn-primary">Voltar à lista</a>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

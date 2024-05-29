@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +21,7 @@ namespace Pharma.Controllers
         // GET: Clientes
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Clientes.Include(c => c.Usuario);
+            var appDbContext = _context.Cliente.Include(c => c.Usuarios);
             return View(await appDbContext.ToListAsync());
         }
 
@@ -33,9 +33,9 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.IdCliente == id);
+            var cliente = await _context.Cliente
+                .Include(c => c.Usuarios)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -47,7 +47,7 @@ namespace Pharma.Controllers
         // GET: Clientes/Create
         public IActionResult Create()
         {
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "AcessoUsuario");
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "Id", "AcessoUsuario");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace Pharma.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdCliente,IdUsuario")] Cliente cliente)
+        public async Task<IActionResult> Create([Bind("Id,UsuarioId")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +64,7 @@ namespace Pharma.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "AcessoUsuario", cliente.IdUsuario);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "Id", "AcessoUsuario", cliente.UsuarioId);
             return View(cliente);
         }
 
@@ -76,12 +76,12 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes.FindAsync(id);
+            var cliente = await _context.Cliente.FindAsync(id);
             if (cliente == null)
             {
                 return NotFound();
             }
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "AcessoUsuario", cliente.IdUsuario);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "Id", "AcessoUsuario", cliente.UsuarioId);
             return View(cliente);
         }
 
@@ -90,9 +90,9 @@ namespace Pharma.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdCliente,IdUsuario")] Cliente cliente)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,UsuarioId")] Cliente cliente)
         {
-            if (id != cliente.IdCliente)
+            if (id != cliente.Id)
             {
                 return NotFound();
             }
@@ -106,7 +106,7 @@ namespace Pharma.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ClienteExists(cliente.IdCliente))
+                    if (!ClienteExists(cliente.Id))
                     {
                         return NotFound();
                     }
@@ -117,7 +117,7 @@ namespace Pharma.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdUsuario"] = new SelectList(_context.Usuarios, "Id", "AcessoUsuario", cliente.IdUsuario);
+            ViewData["UsuarioId"] = new SelectList(_context.Usuario, "Id", "AcessoUsuario", cliente.UsuarioId);
             return View(cliente);
         }
 
@@ -129,9 +129,9 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var cliente = await _context.Clientes
-                .Include(c => c.Usuario)
-                .FirstOrDefaultAsync(m => m.IdCliente == id);
+            var cliente = await _context.Cliente
+                .Include(c => c.Usuarios)
+                .FirstOrDefaultAsync(m => m.Id == id);
             if (cliente == null)
             {
                 return NotFound();
@@ -145,10 +145,10 @@ namespace Pharma.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var cliente = await _context.Clientes.FindAsync(id);
+            var cliente = await _context.Cliente.FindAsync(id);
             if (cliente != null)
             {
-                _context.Clientes.Remove(cliente);
+                _context.Cliente.Remove(cliente);
             }
 
             await _context.SaveChangesAsync();
@@ -157,7 +157,7 @@ namespace Pharma.Controllers
 
         private bool ClienteExists(int id)
         {
-            return _context.Clientes.Any(e => e.IdCliente == id);
+            return _context.Cliente.Any(e => e.Id == id);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace Pharma.Controllers
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Usuarios.ToListAsync());
+            return View(await _context.Usuario.ToListAsync());
         }
 
         // GET: AccessDenied
@@ -49,18 +50,20 @@ namespace Pharma.Controllers
         {
             string invalidCredentials = "Nome de usuário ou senha inválidos";
 
-            var data = await _context.Usuarios.FindAsync(usuario.Id);
+            var data = await _context.Usuario.FirstOrDefaultAsync(u =>
+                                    u.AcessoUsuario == usuario.AcessoUsuario
+                                );
             if (data == null)
             {
                 ViewBag.Message = invalidCredentials;
+
                 return View();
             }
 
             bool isPasswordValid = BCrypt.Net.BCrypt.Verify(usuario.Senha, data.Senha);
             if (isPasswordValid)
             {
-                List<Claim> claims =
-                [
+                List<Claim> claims = [
                     new(ClaimTypes.NameIdentifier, data.Id.ToString()),
                     new(ClaimTypes.Name, data.AcessoUsuario),
                     new(ClaimTypes.Role, data.Cargo.ToString()),
@@ -104,7 +107,7 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios
+            var usuario = await _context.Usuario
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
@@ -131,10 +134,32 @@ namespace Pharma.Controllers
         {
             if (ModelState.IsValid)
             {
-                usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Login", "Usuarios");
+                try
+                {
+                    // Se você for o primeiro a registrar, será automaticamente um admin
+                    // Usuários subsequentemente registrados serão automaticamente farmacêuticos.
+                    // Após isso, apenas admins poderão adicionar outros admins.
+                    bool isFirstUser = !_context.Usuario.Any();
+                    usuario.Cargo = isFirstUser ? Cargos.Admin : Cargos.Farmaceutico;
+
+                    usuario.Senha = BCrypt.Net.BCrypt.HashPassword(usuario.Senha);
+                    _context.Add(usuario);
+                    await _context.SaveChangesAsync();
+                    return User.Identity.IsAuthenticated
+                           ? RedirectToAction(nameof(Index))
+                           : RedirectToAction("Login", "Usuarios");
+                }
+                catch (DbUpdateException err)
+                {
+                    if (err.InnerException is DbException dbException && dbException.Message.Contains("UNIQUE constraint failed"))
+                    {
+                        ModelState.AddModelError("AcessoUsuario", "Este nome para acesso já existe");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Um erro aconteceu ao salvar. Tente novamente");
+                    }
+                }
             }
             return View(usuario);
         }
@@ -147,7 +172,7 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuario.FindAsync(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -190,6 +215,16 @@ namespace Pharma.Controllers
             return View(usuario);
         }
 
+        private async Task<bool> IsLastAdminAsync(int usuarioId)
+        {
+            int adminAmount = await _context
+                                    .Usuario
+                                    .Where(u => u.Cargo == Cargos.Admin && u.Id != usuarioId)
+                                    .CountAsync();
+
+            return adminAmount == 0;
+        }
+
         // GET: Usuarios/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -198,11 +233,22 @@ namespace Pharma.Controllers
                 return NotFound();
             }
 
-            var usuario = await _context.Usuarios
+            var usuario = await _context.Usuario
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (usuario == null)
             {
                 return NotFound();
+            }
+
+            if (
+                usuario != null &&
+                usuario.Cargo == Cargos.Admin &&
+                await IsLastAdminAsync((int)id)
+               )
+            {
+                TempData["Message"] = "Não é possível deletar o último administrador";
+
+                return RedirectToAction(nameof(Index));
             }
 
             return View(usuario);
@@ -213,10 +259,10 @@ namespace Pharma.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var usuario = await _context.Usuarios.FindAsync(id);
+            var usuario = await _context.Usuario.FindAsync(id);
             if (usuario != null)
             {
-                _context.Usuarios.Remove(usuario);
+                _context.Usuario.Remove(usuario);
             }
 
             await _context.SaveChangesAsync();
@@ -225,7 +271,7 @@ namespace Pharma.Controllers
 
         private bool UsuarioExists(int id)
         {
-            return _context.Usuarios.Any(e => e.Id == id);
+            return _context.Usuario.Any(e => e.Id == id);
         }
     }
 }

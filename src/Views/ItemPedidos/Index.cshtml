@@ -1,31 +1,28 @@
-﻿@model IEnumerable<Pharma.Models.ItemPedido>
+@model IEnumerable<Pharma.Models.ItemPedido>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Itens de pedidos</h1>
+<h1>Index</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Criar novo cadastro</a>
+    <a asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.IdItemProduto)
+                @Html.DisplayNameFor(model => model.Quantidade)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.QtProduto)
+                @Html.DisplayNameFor(model => model.ValorUnitario)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.VlUnitario)
+                @Html.DisplayNameFor(model => model.ValorTotal)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.VlTotalItem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PedidoCliente)
+                @Html.DisplayNameFor(model => model.PedidosCliente)
             </th>
             <th></th>
         </tr>
@@ -33,25 +30,22 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IdItemProduto)
-                </td>
             <td>
-                @Html.DisplayFor(modelItem => item.QtProduto)
+                @Html.DisplayFor(modelItem => item.Quantidade)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.VlUnitario)
+                @Html.DisplayFor(modelItem => item.ValorUnitario)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.VlTotalItem)
+                @Html.DisplayFor(modelItem => item.ValorTotal)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PedidoCliente.NtFiscal)
+                @Html.DisplayFor(modelItem => item.PedidosCliente.NotaFiscal)
             </td>
             <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdItemProduto" class="btn btn-dark">Editar</a> |
-                    <a asp-action="Details" asp-route-id="@item.IdItemProduto" class="btn btn-info">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.IdItemProduto" class="btn btn-danger">Apagar</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
 }

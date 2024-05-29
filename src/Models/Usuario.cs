@@ -9,41 +9,41 @@ namespace Pharma.Models
         Farmaceutico
     }
 
-    /**
-        Não coloque acento (ou traços) nas tabelas!!
-    **/
-    [Table("Usuarios")]
+    [Table("Usuario")]
     public class Usuario
     {
         /// <summary>
-        /// Id (chave primária) do usuário
+        /// ID (pk) do usuário
         /// </summary>
-        /// 
         [Key]
         public int Id { get; set; }
+
         /// <summary>
-        /// "Handler" para acesso do usuário (ex: `user123`, `capivara40`)
+        /// "Handler" para o acesso do usuário
+        ///  (ex: "melancia123", "avestruz_argentino")
         /// </summary>
-        [Required(ErrorMessage = "Nome para acesso é obrigatório!")]
+        [Required(ErrorMessage = "Nome para acesso é obrigatório")]
+        [Display(Name = "Nome de acesso")]
         public string AcessoUsuario { get; set; }
+
         /// <summary>
         /// Senha do usuário
         /// </summary>
-        [Required(ErrorMessage = "Senha é obrigatória!")]
+        [Required(ErrorMessage = "Senha é obrigatória")]
         [DataType(DataType.Password)]
         public string Senha { get; set; }
+
         /// <summary>
-        /// Cargo (tipo) do usuário. Pode ser ou um farmacêutico ou um administrador.
+        /// Cargo (tipo) do usuário. Pode ser um farmacêutico ou um administrador.
         /// 
-        /// 11/04: Por enquanto, qualquer um pode colocar o cargo que desejar, apenas
-        /// para não complicar demais o código. Eventualmente colocaremos um tipo de
-        /// restrição e um usuário administrador "padrão", para que só ele consiga
-        /// registrar outros administradores (e não deixar qualquer um ser adm.)
+        /// Por enquanto, ao registrar, pode-se auto-definir o cargo, apenas por
+        /// conveniência pra testar melhor. Eventualmente terá uma restrição, com
+        /// um administrador padrão, e apenas admins podem adicionar outros admins.
         /// </summary>
         [Required(ErrorMessage = "O usuário precisa ser um administrador ou um farmacêutico!")]
         public Cargos Cargo { get; set; }
 
-        //Relação virtual entre usuário e Categorias 
+        // Relação virtual entre Usuário e Categorias
         public ICollection<Categoria> Categorias { get; set; }
     }
 }

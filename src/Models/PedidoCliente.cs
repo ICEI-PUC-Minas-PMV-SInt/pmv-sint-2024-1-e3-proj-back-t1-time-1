@@ -1,30 +1,50 @@
-﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pharma.Models
 {
-    [Table("PedidosClientes")]
+    [Table("PedidoCliente")]
     public class PedidoCliente
     {
+        /// <summary>
+        /// ID (pk) do Pedido do Cliente
+        /// </summary>
         [Key]
-        [Display(Name = "Id do Pedido")]
-        public int IdPedido { get; set; }
+        [Display(Name = "ID do pedido")]
+        public int Id { get; set; }
 
-        [Required]
-        [Display(Name = "Data do Pedido")]
-        public DateTime DtPedido { get; set; }
-        
-        [Required]
-        [Display(Name = "Nota Fiscal")]
-        public string NtFiscal { get; set; }
+        /// <summary>
+        /// Data em que o pedido foi feito.
+        /// </summary>
+        [Required(ErrorMessage = "Data do pedido é obrigatória!")]
+        [Display(Name = "Data do pedido")]
+        [DataType(DataType.Date)]
+        public DateTime DataPedido { get; set; }
 
-        [Required]
-        [Display(Name = "Total do Pedido")]
+        /// <summary>
+        /// Sequência da nota fiscal para o pedido.
+        /// 
+        /// OBS: de certa forma, por uma nota fiscal ser um identificador
+        /// único, se torna um ID redundante?
+        /// </summary>
+        [Required(ErrorMessage = "A nota fiscal é obrigatória!")]
+        [Display(Name = "Nota fiscal")]
+        public string NotaFiscal { get; set; }
+
+        /// <summary>
+        /// Total monetário do pedido.
+        /// </summary>
+        [Required(ErrorMessage = "O total do pedido não pode ser nulo!")]
+        [Display(Name = "Total do pedido")]
         public decimal TotalPedido { get; set; }
 
+        /// <summary>
+        /// Cliente que fez este pedido.
+        /// 
+        /// (Relação Cliente-PedidoCliente)
+        /// </summary>
         [ForeignKey("Cliente")]
-        public int IdCliente { get; set; }
-        public virtual Cliente Cliente { get; set; }
+        public int ClienteId { get; set; }
+        public virtual Cliente Clientes { get; set; }
     }
 }

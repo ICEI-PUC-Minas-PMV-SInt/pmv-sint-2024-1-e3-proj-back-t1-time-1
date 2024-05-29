@@ -1,0 +1,49 @@
+@model Pharma.Models.PedidoCompra
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>PedidoCompra</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="DataCompra" class="control-label"></label>
+                <input asp-for="DataCompra" class="form-control" />
+                <span asp-validation-for="DataCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotaFiscal" class="control-label"></label>
+                <input asp-for="NotaFiscal" class="form-control" />
+                <span asp-validation-for="NotaFiscal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPedido" class="control-label"></label>
+                <input asp-for="TotalPedido" class="form-control" />
+                <span asp-validation-for="TotalPedido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdFornecedor" class="control-label"></label>
+                <select asp-for="IdFornecedor" class="form-control" asp-items="ViewBag.IdFornecedor"></select>
+                <span asp-validation-for="IdFornecedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

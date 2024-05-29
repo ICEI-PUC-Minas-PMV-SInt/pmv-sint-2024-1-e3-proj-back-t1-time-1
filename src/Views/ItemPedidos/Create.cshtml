@@ -1,50 +1,45 @@
-﻿@model Pharma.Models.ItemPedido
+@model Pharma.Models.ItemPedido
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Criar novo cadastro</h1>
+<h1>Create</h1>
 
-<h4>Itens de pedidos</h4>
+<h4>ItemPedido</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="IdItemProduto" class="control-label"></label>
-                <input asp-for="IdItemProduto" class="form-control" />
-                <span asp-validation-for="IdItemProduto" class="text-danger"></span>
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" />
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="QtProduto" class="control-label"></label>
-                <input asp-for="QtProduto" class="form-control" />
-                <span asp-validation-for="QtProduto" class="text-danger"></span>
+                <label asp-for="ValorUnitario" class="control-label"></label>
+                <input asp-for="ValorUnitario" class="form-control" />
+                <span asp-validation-for="ValorUnitario" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="VlUnitario" class="control-label"></label>
-                <input asp-for="VlUnitario" class="form-control" />
-                <span asp-validation-for="VlUnitario" class="text-danger"></span>
+                <label asp-for="ValorTotal" class="control-label"></label>
+                <input asp-for="ValorTotal" class="form-control" />
+                <span asp-validation-for="ValorTotal" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="VlTotalItem" class="control-label"></label>
-                <input asp-for="VlTotalItem" class="form-control" />
-                <span asp-validation-for="VlTotalItem" class="text-danger"></span>
+                <label asp-for="PedidoClienteId" class="control-label"></label>
+                <select asp-for="PedidoClienteId" class ="form-control" asp-items="ViewBag.PedidoClienteId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="IdPedido" class="control-label"></label>
-                <select asp-for="IdPedido" class ="form-control" asp-items="ViewBag.IdPedido"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Criar" class="btn btn-success my-2" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index" class="btn btn-primary">Voltar à lista</a>
+    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

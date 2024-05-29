@@ -7,14 +7,14 @@
     <title>@ViewData["Title"] - Pharma</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Pharma.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/src.styles.css" asp-append-version="true" />
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pharma</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">src</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,45 +27,40 @@
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios"
                                     asp-action="Index">Usuários</a>
                             </li>
-                         
                         }
                         @if (User.Identity.IsAuthenticated)
                         {
-                         
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Categorias"
-                                   asp-action="Index">Categorias</a>
+                                    asp-action="Index">Categorias</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Clientes"
-                                   asp-action="Index">Clientes</a>
+                                    asp-action="Index">Clientes</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="PedidoCliente"
-                                   asp-action="Index">Pedidos de clientes</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="PedidosClientes"
+                                    asp-action="Index">Pedidos de clientes</a>
                             </li>
 
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="ItemPedidos"
-                                   asp-action="Index">Itens de pedidos</a>
+                                    asp-action="Index">Itens de pedidos</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="MovimentacaoEstoques"
-                                   asp-action="Index">Movimentações do estoque</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="MovimentacoesEstoque"
+                                    asp-action="Index">Movimentações do estoque</a>
                             </li>
                         }
                     </ul>
                     <ul class="navbar-nav">
                         @if (User.Identity.IsAuthenticated)
                         {
-                            <li class="nav-item">Olá, @User.Identity.Name</li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Usuarios"
-                                    asp-action="Logout">Sair</a>
-                            </li>
+                            <li class="nav-item">Olá, @User.Identity.Name (<a class="text-dark" asp-area=""
+                                    asp-controller="Usuarios" asp-action="Logout">Sair</a>)</li>
                         }
                         else
                         {
@@ -87,7 +82,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2024 - Pharma - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2024 - src - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
