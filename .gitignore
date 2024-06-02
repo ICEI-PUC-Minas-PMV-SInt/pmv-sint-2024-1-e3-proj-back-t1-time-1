@@ -6,6 +6,7 @@ node_modules/
 bin/
 obj/
 Migrations/
+Data/
 Data.db
 Data.db-shm
 Data.db-wal
