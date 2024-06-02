@@ -154,7 +154,7 @@ Exclusão
 Responsáveis:
 
 - Estruturação da Model: Gabriel Marco
-- Lógica de Listar, Cadastrar, Excluir e Editar: Gabriel Marco
+- Lógica de Listar, Visualizar detalhes, Cadastrar, Excluir e Editar: Gabriel Marco
 - Criação da View: Gabriel Marco
 - Criação de lógica para alterar rota e texto do botão na tela de cadastro
 - Estiização: Alessandra Gabriele
@@ -184,12 +184,40 @@ Responsáveis:
 
 - Lógica para listar todas categorias cadastradas para o admin e listar para o farmacêutico somente as categorias que ele cadastrou: Alessandra Gabriele e Wesley Murat
 - Estruturação da Model: Alessandra Murat
-- Lógica de Listar, Cadastrar, Excluir e Editar: Alessandra Murat
+- Lógica de Listar, Visualizar detalhes, Cadastrar, Excluir e Editar: Alessandra Murat
 - Criação da View e Estilização: Alessandra Gabriele
 
 ### Clientes
 
+Responsável:
+
+- Estruturação da Model: Gean Campos
+- Lógica de Listar, Visualizar Detalhes, Cadastrar, Excluir e Editar: Gean Campos
+- Criação da View e Estilização: Gean Campos
+
+### Fornecedores
+
+Responsável:
+
+- Estruturação da Model: Camila Santos
+- Lógica de Listar, Visualizar Detalhes, Cadastrar, Excluir e Editar: Camila
+- Criação da View e Estilização: Camila
+
 ### Vendas
+
+Responsável:
+
+- Estruturação da Model: Gean Campos
+- Lógica de Listar, Visualizar Detalhes, Cadastrar, Excluir e Editar: Gean Campos
+- Criação da View e Estilização: Gean Campos
+
+### Compras
+
+Responsável:
+
+- Estruturação da Model: Camila Santos
+- Lógica de Listar, Visualizar Detalhes, Cadastrar, Excluir e Editar: Camila Campos
+- Criação da View e Estilização: Camila Campos
 
 ### Localizações
 
@@ -217,9 +245,51 @@ Responsáveis:
 
 ### Produto
 
+![Tela - Listagem de Produtos](./img/Telas/Produto/listagem.png)
+
+Cadastro de produto
+![Tela - Cadastro de Produto](./img/Telas/Produto/cadastrar.png)
+
+Edição de produto
+![Tela - Edição de Produto](./img/Telas/Produto/editar.png)
+
+Detalhe do produto
+![Tela - Detalhe do Produto](./img/Telas/Produto/detalhes.png)
+
+Exclusão do Produto
+![Tela - Exclusão do Produto](./img/Telas/Produto/excluir.png)
+
 - Acompanhamento para realização da tarefa: Gean Campos
 - Estruturação da Model: Laura Alice
-- Lógica de Listar, Cadastrar, Excluir e Editar: Laura Alice
+- Lógica de Listar, Visualizar detalhes, Cadastrar, Excluir e Editar: Laura Alice
 - Criação da View: Laura Alice
+- Estilização: Alessandra Murat
 
 ### Estoque
+
+![Tela - Estoque](./img/Telas/Estoque/listagem.png)
+
+
+Responsável:
+
+- Estruturação da Model: Gean Campos
+- Lógica de Listar, Visualizar Detalhes, Excluir e Editar: Gean Campos
+- Criação da View: Gean Campos
+
+Obs: A lógica segue o modelo de outras telas, entretanto será realizado uma alteração para que o Estoque seja atualizado de acordo com um pedido ou uma compra.
+
+### Tabela intermediária de itens de uma venda (ItemPedidoCliente)
+
+Responsável:
+
+- Estruturação da Model: Gean Campos
+
+Obs: Foi criado a view e os controllers, entretanto será necessário a modificação para essa tabela só receber os intes de cada pedido.
+
+### Tabela intermediária de itens de uma compra (ItemPedidoCompra)
+
+Responsável:
+
+- Estruturação da Model: Celso Nunes
+
+Obs: Foi criado a view e os controllers, entretanto será necessário a modificação para essa tabela só receber os itens de cada pedido.
