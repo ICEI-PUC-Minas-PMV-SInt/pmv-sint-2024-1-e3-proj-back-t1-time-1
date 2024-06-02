@@ -26,7 +26,6 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 > |Após o login, a página destinada ao uso específico do usuário será carregada automaticamente.|SIM||
 > |A página deve exibir a tabela com o estoque disponível.|--|Implementação na próxima etapa de desenvolvimento|
 > |A tabela deve funcionar adequadamente para todos os usuários.|SIM||
-> |A página deve possibilitar a pesquisa de um medicamento específico na tabela.|--||
 > |A página carregada deve ter acesso ao botão de logoff.|SIM||
 > |Após o logoff, a página de login deve ser novamente carregada.|SIM||
 > 
@@ -34,7 +33,6 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 > |-------------|-----|----|
 > |Critérios de êxito|Avaliação|Observações|
 > |Após o login, a página inicial de uso destinada deve ser carregada automaticamente.|SIM||
-> |A página deve exibir uma tabela com o estoque atualizado, além de oferecer uma opção de busca rápida.|--||
 > |O acesso dos fornecedores deve possibilitar a edição do estoque.|--|Implementação na próxima etapa de desenvolvimento|
 > |O banco de dados deve atualizar o estoque automaticamente após qualquer alteração.|SIM||
 > |Após o logoff, a página de login deve ser novamente carregada.|SIM|| 
@@ -43,7 +41,6 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 > |-------------|-----|----|
 > |Critérios de êxito|Avaliação|Observações|
 > |Após o login, a página inicial correspondente precisa ser carregada.|SIM||
-> |A página deve exibir uma tabela de estoque com opção de pesquisa rápida.|--||
 > |A área do usuário deve possibilitar a alteração dos dados e localização para verificar o estoque.|SIM||
 > |A página carregada deve ter sempre acesso ao botão de logoff.|SIM|| 
 > |Após o logoff, a página de login deve ser novamente carregada.|SIM||
