@@ -1,13 +1,13 @@
 @model IEnumerable<Pharma.Models.Categoria>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Categorias";
 }
 
-<h1>Index</h1>
+<h1>Categorias</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn bg-primary text-white" asp-action="Create">Cadastrar Categoria</a>
 </p>
 <table class="table">
     <thead>
@@ -15,27 +15,38 @@
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Usuarios)
-            </th>
-            <th></th>
+            
+            @if (User.IsInRole("Admin"))
+            {
+                <th>
+                    @Html.DisplayNameFor(model => model.Usuarios)
+                </th>
+            }
+
+            <th class="text-center"></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usuarios.AcessoUsuario)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+               
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuarios.AcessoUsuario)
+                    </td>
+                }
+
+                <td class="text-center">
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
