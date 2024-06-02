@@ -1,11 +1,17 @@
-@model IEnumerable<Pharma.Models.Usuario>
+﻿@model IEnumerable<Pharma.Models.Usuario>
 
 @{
     ViewData["Title"] = "Index";
     var message = TempData["Message"];
 }
 
-<h1>Index</h1>
+
+<div class="d-flex justify-content-between mb-5">
+    <h1>Usuários</h1>
+    <p>
+        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Usuário</a>
+    </p>
+</div>
 
 @if (message != null)
 {
@@ -14,9 +20,6 @@
     </div>
 }
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -40,9 +43,9 @@
                     @Html.DisplayFor(modelItem => item.Cargo)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> 
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
                 </td>
             </tr>
         }

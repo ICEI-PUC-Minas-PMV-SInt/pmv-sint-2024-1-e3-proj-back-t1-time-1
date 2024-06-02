@@ -1,4 +1,4 @@
-@model IEnumerable<Pharma.Models.Categoria>
+﻿@model IEnumerable<Pharma.Models.Categoria>
 
 @{
     ViewData["Title"] = "Categorias";
@@ -18,7 +18,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
-            
+
             @if (User.IsInRole("Admin"))
             {
                 <th>
@@ -26,7 +26,7 @@
                 </th>
             }
 
-            <th class="text-center"></th>
+            <th class="text-center">Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -36,7 +36,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Nome)
                 </td>
-               
+
                 @if (User.IsInRole("Admin"))
                 {
                     <td>

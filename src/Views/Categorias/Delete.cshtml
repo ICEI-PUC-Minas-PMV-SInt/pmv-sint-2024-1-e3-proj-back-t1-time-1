@@ -1,4 +1,4 @@
-@model Pharma.Models.Categoria
+﻿@model Pharma.Models.Categoria
 
 @{
     ViewData["Title"] = "Delete";
@@ -6,8 +6,10 @@
 
 <h1>Excluir Categoria</h1>
 
-<h4 style="margin-bottom:24px">Tem certeza que deseja excluir essa categoria?</h4>
+<h4>Tem certeza que deseja excluir essa categoria?</h4>
 <div>
+
+    <hr />
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
@@ -23,9 +25,10 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete" class="d-flex gap-3" style="margin-top:32px">
+    <form class="d-flex gap-3" asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Excluir" class="btn btn-danger" />
         <a asp-action="Index" class="text-decoration-none btn px-3" style="background-color: #78787833">Voltar</a>
+      
     </form>
 </div>

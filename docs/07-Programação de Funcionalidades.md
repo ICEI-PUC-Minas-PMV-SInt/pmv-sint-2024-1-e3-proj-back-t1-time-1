@@ -116,7 +116,7 @@ Caso o mesmo digite dados inválidos, será alertado por ua caixa de texto
 Responsáveis:
 
 - Estruturação da Página, autenticação de usuário e rendeização de menus conforme tipo de usuário (admin ou formacêutico): Gabriel Marco
-- Estilização e lógica na view para mostrar mensagem de credenciais inválidas: Alessandra Gabriele  
+- Estilização e lógica na view para mostrar mensagem de credenciais inválidas: Alessandra Gabriele
 
 ### Criar Conta
 
@@ -129,35 +129,63 @@ Responsáveis:
 - Estruturação da Página, validações de campos e lógica para criação do primeiro usuário como admin e automaticamente os próximos como farmacêutico: Gabriel Marco
 - Estilização: Alessandra Gabriele
 
-
 ### Usuários
+
+A opção de usuários somente estará disponível para usuário do tipo admin
+
+Lista de Usuários
+![Tela - Listagem de Usuários](./img/Telas/Usuários/listagem.png)
+
+Para o cadastro foi utilizado a mesma tela para criar conta, mas com a adição do campo do tipo de usuário e botão de voltar
+![Tela - Listagem de Usuários](./img/Telas/Usuários/cadastrar.png)
+
+Detalhes do usuário
+![Tela - Detalhes do Usuário](./img/Telas/Usuários/detalhes.png)
+
+Editar Usuário
+![Tela - Editar Usuário](./img/Telas/Usuários/editar.png)
+
+Alerta de mensagem, caso o admin tente excluir o único admin do sistema
+![Tela - Excluir Usuário](./img/Telas/Usuários/alterta.png)
+
+Exclusão
+![Tela - Excluir Usuário](./img/Telas/Usuários/excluir.png)
+
+Responsáveis:
+
+- Estruturação da Model: Gabriel Marco
+- Lógica de Listar, Cadastrar, Excluir e Editar: Gabriel Marco
+- Criação da View: Gabriel Marco
+- Criação de lógica para alterar rota e texto do botão na tela de cadastro
+- Estiização: Alessandra Gabriele
 
 ### Categorias
 
-Lista de categorias 
-![Tela - listagemd e Categorias](./img/Telas/Categoria/listagem.png)
+Lista de categorias
+![Tela - Listagem de Categorias](./img/Telas/Categoria/listagem.png)
 
 A criação de categoria no momento está com apenas um campo, pois com a integração ficou faltando o campo de descrição que em breve será adicionado
 
 ![Tela - Cadastro de Categoria](./img/Telas/Categoria/cadastro.png)
 
+Detalhes
+![Tela - Detalhes da categoria](./img/Telas/Categoria/detalhes.png)
+
 Edição
-![Tela - Cadastro de Categoria](./img/Telas/Categoria/editar.png)
+![Tela - Edição de Categoria](./img/Telas/Categoria/editar.png)
 
 Exclusão
-![Tela - Cadastro de Categoria](./img/Telas/Categoria/excluir.png)
+![Tela - Exclusão de Categoria](./img/Telas/Categoria/excluir.png)
 
 Listagem de categorias Admin, onde o mesmo tem a possibilidade de visualizar todas as categorias cadastradas e qual usuário cadastrou
-![Tela - Cadastro de Categoria](./img/Telas/Categoria/categoria_admin.png)
-
+![Tela - Listagem de Categorias - Admin](./img/Telas/Categoria/categoria_admin.png)
 
 Responsáveis:
 
 - Lógica para listar todas categorias cadastradas para o admin e listar para o farmacêutico somente as categorias que ele cadastrou: Alessandra Gabriele e Wesley Murat
 - Estruturação da Model: Alessandra Murat
-- Lógica de Listar, Cadastrar, Excluir e Editar: Alessandra Murat 
+- Lógica de Listar, Cadastrar, Excluir e Editar: Alessandra Murat
 - Criação da View e Estilização: Alessandra Gabriele
-
 
 ### Clientes
 
@@ -165,19 +193,33 @@ Responsáveis:
 
 ### Localizações
 
+![Tela - Listagem de Localizações](./img/Telas/Localizacoes/listagem.png)
+
+Cadastro com validação de campos
+![Tela - Cadastro de Localização](./img/Telas/Localizacoes/cadastrar.png)
+
+Detalhes
+![Tela - Detalhes da Localização](./img/Telas/Localizacoes/detalhes.png)
+
+Edição
+![Tela - Edição de Localiazção](./img/Telas/Localizacoes/editar.png)
+
+Exclusão
+![Tela - Excluir Localização](./img/Telas/Localizacoes/excluir.png)
+
 Responsáveis:
 
 - Lógica para listar todas as localizações cadastradas para o admin e listar para o farmacêutico somente as localizações que ele cadastrou: Wesley Murat e Alessandra (No momento não está aplicado a essa tela por conta das alterações na integração)
 - Estruturação da Model: Wesley Murat
-- Lógica de Listar, Cadastrar, Excluir e Editar: Wesley Murat
+- Lógica de Listar, Visualizar detalhes, Cadastrar, Excluir e Editar: Wesley Murat
 - Criação da View: Wesley Murat
 - Estilização: Alessandra Gabriele
 
 ### Produto
+
 - Acompanhamento para realização da tarefa: Gean Campos
 - Estruturação da Model: Laura Alice
 - Lógica de Listar, Cadastrar, Excluir e Editar: Laura Alice
 - Criação da View: Laura Alice
 
-
-### Estoque 
+### Estoque

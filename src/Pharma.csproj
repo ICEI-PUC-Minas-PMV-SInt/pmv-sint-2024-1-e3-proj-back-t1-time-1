@@ -10,6 +10,16 @@
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
     <Watch Include="**\*.cshtml;*.razor;*.js;*.css" Exclude="**\obj\**\*;bin\**\*" />
+    <None Include="Views\Categorias\Delete.cshtml" />
+    <None Include="Views\Categorias\Index.cshtml" />
+    <None Include="Views\Localizacoes\Create.cshtml" />
+    <None Include="Views\Localizacoes\Details.cshtml" />
+    <None Include="Views\Localizacoes\Edit.cshtml" />
+    <None Include="Views\Localizacoes\Index.cshtml" />
+    <None Include="Views\Usuarios\Delete.cshtml" />
+    <None Include="Views\Usuarios\Details.cshtml" />
+    <None Include="Views\Usuarios\Edit.cshtml" />
+    <None Include="Views\Usuarios\Index.cshtml" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

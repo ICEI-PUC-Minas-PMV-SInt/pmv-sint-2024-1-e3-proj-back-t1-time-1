@@ -1,13 +1,18 @@
-@model IEnumerable<Pharma.Models.Localizacao>
+ï»¿@model IEnumerable<Pharma.Models.Localizacao>
 
 @{
     ViewData["Title"] = "Index";
 }
 
+<head>
+    <meta charset="utf-8" />
+
+</head>
+
 <div class="d-flex justify-content-between mb-5">
-    <h1>Localizações</h1>
+    <h1>LocalizaÃ§Ãµes</h1>
     <p>
-        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Localização</a>
+        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar LocalizaÃ§Ã£o</a>
     </p>
 </div>
 
@@ -28,23 +33,24 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Capacidade)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Capacidade)
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> 
+                    <a class="btn btn-info"  asp-action="Details" asp-route-id="@item.Id">Detalhes</a> 
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

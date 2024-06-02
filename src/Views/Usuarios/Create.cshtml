@@ -32,9 +32,19 @@
                 <input type="submit" value="Criar" class="btn text-white py-2" style="background-color:#04828d; font-weight:700" />
                 </div>
             </form>
-        <div class="d-flex flex-column align-items-center">
-            <a asp-action="Login" class="text-center mt-3 text-decoration-none" style="font-weight: 600; font-size:16px; color:#787878">Acessar conta</a>
-        </div>
+
+             @if (!User.IsInRole("Admin"))
+                {
+            <div class="d-flex flex-column align-items-center">
+                <a asp-action="Login" class="text-center mt-3 text-decoration-none" style="font-weight: 600; font-size:16px; color:#787878">Acessar conta</a>
+            </div>
+        } else
+        {
+            <div class="d-flex flex-column align-items-center">
+                <a asp-action="Index" class="text-center mt-3 text-decoration-none" style="font-weight: 600; font-size:16px; color:#787878">Voltar</a>
+            </div>
+        }
+
        
         </div>
 </div>
