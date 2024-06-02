@@ -4,11 +4,14 @@
     ViewData["Title"] = "Categorias";
 }
 
-<h1>Categorias</h1>
+<div class="d-flex justify-content-between mb-5">
+    <h1>Categorias</h1>
+    <p>
+        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Categoria</a>
+    </p>
+</div>
 
-<p>
-    <a class="btn bg-primary text-white" asp-action="Create">Cadastrar Categoria</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>

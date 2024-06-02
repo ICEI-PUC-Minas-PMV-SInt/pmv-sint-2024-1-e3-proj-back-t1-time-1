@@ -3,13 +3,18 @@
     ViewData["Title"] = "Login";
 }
 
-<h1>Faça seu login</h1>
-<hr>
-<div class="row">
-    <div class="col-md-4">
+<div class="d-flex justify-content-center my-5">
+    <div style="padding:48px; width: 500px; box-shadow: 0px 6px 12px -6px rgba(24, 39, 75, 0.12), 0px 8px 24px -4px rgba(24, 39, 75, 0.08);">
+        <h1 class="text-center" style="color: #787878; margin-bottom: 24px">Acesse sua conta!</h1>
+        @if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class="py-2 d-flex align-items-center justify-content-center" style="background-color: #AB23461A; color:#AB2346; font-size:16px; font-weight:600; margin-bottom:24px">
+                <p class="m-0">@ViewBag.Message</p>
+            </div>
+        }
         <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <div class="form-group mb-4">
                 <label asp-for="AcessoUsuario" class="control-label"></label>
                 <input asp-for="AcessoUsuario" class="form-control">
                 <span asp-validation-for="AcessoUsuario" class="text-danger"></span>
@@ -19,13 +24,24 @@
                 <input asp-for="Senha" class="form-control">
                 <span asp-validation-for="Senha" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Acessar" class="btn btn-primary">
-                <a asp-area="" asp-controller="Usuarios" asp-action="Create" class="btn btn-secondary">Criar uma
-                    conta</a>
+            
+            <div class="d-flex flex-column" style="margin-top:32px">
+                <input type="submit" value="Acessar" class="btn text-white py-2" style="background-color:#04828d; font-weight:700">
+                <a asp-area="" asp-controller="Usuarios" asp-action="Create" class="text-center mt-3 text-decoration-none" style="font-weight: 600; font-size:16px; color:#787878">
+                    Criar uma
+                    conta
+                </a>
             </div>
         </form>
-        <h3>@ViewBag.Message</h3>
+  
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-4">
+       
     </div>
 </div>
 

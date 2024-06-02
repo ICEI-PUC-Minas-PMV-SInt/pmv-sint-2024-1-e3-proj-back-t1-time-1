@@ -4,9 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Categoria</h4>
+<h1>Editar Categoria</h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -21,16 +19,17 @@
           
             <input type="hidden" asp-for="UsuarioId" />
 
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="form-group d-flex gap-3" style="margin-top:32px">
+                <input type="submit" value="Salvar" class="btn text-white py-2" style="background-color:#04828d; font-weight:700" />
+                <a asp-action="Index" class="text-decoration-none btn px-3" style="background-color: #78787833">Voltar</a>
             </div>
+
+          
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{
