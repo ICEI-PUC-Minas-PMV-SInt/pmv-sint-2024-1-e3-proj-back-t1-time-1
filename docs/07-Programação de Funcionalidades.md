@@ -86,7 +86,15 @@ Ex: Páginas dinâmicas geradas com o Razor como a de listagem, criação, ediç
 
 ```
 
-## Principais padrões GoF
+## Funcionalidades
+
+### Tela Principal
+
+![Tela - Principal](./img/Telas/Principal/tela_principal.png)
+
+Responsáveis:
+- Estruturação da Página: Gabriel Marco
+- Estilização: Alessandra Gabriele
 
 
 
