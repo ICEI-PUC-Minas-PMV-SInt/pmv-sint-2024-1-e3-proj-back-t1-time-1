@@ -189,6 +189,8 @@ Responsáveis:
 
 ### Clientes
 
+#### Página funcionando, mas a resolver pendências relacionadas ao erro na falha da criação de um novo cliente, por isso não é possível acessar as páginas de edição, detalhamento e de exclusão, já que não está criando, por enquanto.
+
 Responsável:
 
 - Estruturação da Model: Gean Campos
@@ -204,6 +206,8 @@ Responsável:
 - Criação da View e Estilização: Camila
 
 ### Vendas
+
+#### Página funcionando totalmente, mas existe a dependência da criação de um cliente, o que não está totalmente implementado ainda.
 
 Responsável:
 
@@ -284,7 +288,7 @@ Responsável:
 
 - Estruturação da Model: Gean Campos
 
-Obs: Foi criado a view e os controllers, entretanto será necessário a modificação para essa tabela só receber os intes de cada pedido.
+Obs: Foi criado a view e os controllers, entretanto será necessário a modificação para essa tabela só receber os itens de cada pedido.
 
 ### Tabela intermediária de itens de uma compra (ItemPedidoCompra)
 
