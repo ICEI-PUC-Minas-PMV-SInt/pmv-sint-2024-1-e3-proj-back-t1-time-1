@@ -1,14 +1,10 @@
-# Learn about building .NET container images:
-# https://github.com/dotnet/dotnet-docker/blob/main/samples/README.md
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 ARG TARGETARCH
-WORKDIR /source
+WORKDIR /app
 
-# copy csproj and restore as distinct layers
 COPY src/*.csproj .
 RUN dotnet restore -a $TARGETARCH
 
-# copy and publish app and libraries
 COPY src/. .
 RUN dotnet publish -a $TARGETARCH --no-restore --property:PublishDir=/app
 
@@ -18,9 +14,6 @@ ENV PATH="$PATH:/root/.dotnet/tools"
 RUN dotnet ef migrations add InitialCreate
 RUN dotnet ef database update
 
-# Enable globalization and time zones:
-# https://github.com/dotnet/dotnet-docker/blob/main/samples/enable-globalization.md
-# final stage/image
 FROM mcr.microsoft.com/dotnet/nightly/aspnet:8.0-alpine-composite
 EXPOSE 8080
 WORKDIR /app
