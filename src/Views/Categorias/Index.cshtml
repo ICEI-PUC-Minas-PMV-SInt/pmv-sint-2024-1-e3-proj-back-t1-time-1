@@ -4,11 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<div class="d-flex justify-content-between mb-5 align-items-center">
+    <h1>Categorias</h1>
+    <p>
+        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Categoria</a>
+    </p>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -30,11 +31,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Usuarios.AcessoUsuario)
             </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+                <td class="text-center">
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
         </tr>
 }
     </tbody>
