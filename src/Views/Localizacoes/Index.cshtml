@@ -4,15 +4,11 @@
     ViewData["Title"] = "Index";
 }
 
-<head>
-    <meta charset="utf-8" />
-
-</head>
-
 <div class="d-flex justify-content-between mb-5 align-items-center">
-    <h1>Localizacoes</h1>
+    <h1>Localizações</h1>
     <p>
-        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Localizacao</a>
+        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700"
+            asp-action="Create">Cadastrar Localização</a>
     </p>
 </div>
 <table class="table">
@@ -31,23 +27,23 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Capacidade)
-            </td>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Capacidade)
+                </td>
                 <td class="text-center">
                     <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
                     <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
                 </td>
-        </tr>
-}
+            </tr>
+        }
     </tbody>
 </table>
