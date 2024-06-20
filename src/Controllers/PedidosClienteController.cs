@@ -47,7 +47,7 @@ namespace Pharma.Controllers
         // GET: PedidosCliente/Create
         public IActionResult Create()
         {
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Bairro");
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Cpf");
             return View();
         }
 
@@ -64,7 +64,7 @@ namespace Pharma.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Bairro", pedidoCliente.ClienteId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Cpf", pedidoCliente.ClienteId);
             return View(pedidoCliente);
         }
 
@@ -81,7 +81,7 @@ namespace Pharma.Controllers
             {
                 return NotFound();
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Bairro", pedidoCliente.ClienteId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Cpf", pedidoCliente.ClienteId);
             return View(pedidoCliente);
         }
 
@@ -117,7 +117,7 @@ namespace Pharma.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Bairro", pedidoCliente.ClienteId);
+            ViewData["ClienteId"] = new SelectList(_context.Cliente, "Id", "Cpf", pedidoCliente.ClienteId);
             return View(pedidoCliente);
         }
 

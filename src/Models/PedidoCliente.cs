@@ -44,6 +44,7 @@ namespace Pharma.Models
         /// (Relação Cliente-PedidoCliente)
         /// </summary>
         [ForeignKey("Cliente")]
+        [Display(Name = "CPF do cliente")]
         public int ClienteId { get; set; }
         public virtual Cliente Clientes { get; set; }
     }
