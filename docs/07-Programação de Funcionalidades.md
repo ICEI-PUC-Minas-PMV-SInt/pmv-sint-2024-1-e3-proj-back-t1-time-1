@@ -189,7 +189,21 @@ Responsáveis:
 
 ### Clientes
 
-#### Página funcionando, mas a resolver pendências relacionadas ao erro na falha da criação de um novo cliente, por isso não é possível acessar as páginas de edição, detalhamento e de exclusão, já que não está criando, por enquanto.
+Lista de clientes
+![Tela - Listagem de Clientes](./img/Telas/Clientes/listagem_clientes.png)
+
+![Tela - Cadastro de Clientes](./img/Telas/Clientes/cadastro_clientes_1.png)
+![Tela - Cadastro de Clientes](./img/Telas/Clientes/cadastro_clientes_2.png)
+
+Detalhes
+![Tela - Detalhes dos Clientes](./img/Telas/Clientes/detalhes_clientes.png)
+
+Edição
+![Tela - Edição de Clientes](./img/Telas/Clientes/edicao_clientes_1.png)
+![Tela - Edição de Clientes](./img/Telas/Clientes/edicao_clientes_2.png)
+
+Exclusão
+![Tela - Exclusão de Clientes](./img/Telas/Clientes/excluir_clientes.png)
 
 Responsável:
 
