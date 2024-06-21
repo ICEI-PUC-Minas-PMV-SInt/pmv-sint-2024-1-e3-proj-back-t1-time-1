@@ -18,9 +18,19 @@ namespace Pharma.Controllers
             _context = context;
         }
 
+        string emptyLocations = "Registre uma localização antes de registrar uma venda.";
+
         // GET: Produtos
         public async Task<IActionResult> Index()
         {
+            /*
+                Evitar que produtos possam ser registrados sem uma localização
+                já existente no banco de dados.
+            */
+            bool hasLocations = _context.Localizacao.Any();
+            ViewBag.HasLocations = hasLocations;
+            ViewBag.EmptyLocations = emptyLocations;
+
             var appDbContext = _context.Produto.Include(p => p.Categoria).Include(p => p.Localizacao).Include(p => p.Usuario);
             return View(await appDbContext.ToListAsync());
         }

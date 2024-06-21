@@ -7,7 +7,8 @@
 <div class="d-flex justify-content-between mb-5 align-items-center">
     <h1>Fornecedores</h1>
     <p>
-        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Fornecedor</a>
+        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700"
+            asp-action="Create">Cadastrar Fornecedor</a>
     </p>
 </div>
 <table class="table">
@@ -56,53 +57,54 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.RazaoSocial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cnpj)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelefoneDDD)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TelefoneNumero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cep)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Logadouro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Numero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Complemento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bairro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cidade)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Usuario.AcessoUsuario)
-            </td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RazaoSocial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cnpj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelefoneDDD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelefoneNumero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Logadouro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Complemento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bairro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Estado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario.AcessoUsuario)
+                </td>
                 <td class="text-center d-flex gap-1">
                     <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
                     <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
                     <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
                 </td>
-        </tr>
-}
+            </tr>
+        }
     </tbody>
 </table>

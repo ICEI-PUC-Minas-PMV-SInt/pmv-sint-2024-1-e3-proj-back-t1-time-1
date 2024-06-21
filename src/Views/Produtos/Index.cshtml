@@ -2,14 +2,19 @@
 
 @{
     ViewData["Title"] = "Index";
+    bool hasLocations = ViewBag.HasLocations;
+    string noLocations = ViewBag.EmptyLocations;
 }
 
 <div class="d-flex justify-content-between mb-5 align-items-center">
     <h1>Produtos</h1>
-    <p>
-        <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Produto</a>
-    </p>
+    @if (hasLocations) {
+        <p>
+            <a class="text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700" asp-action="Create">Cadastrar Produto</a>
+        </p>
+    }
 </div>
+@if (hasLocations) {
 <table class="table">
     <thead>
         <tr>
@@ -64,3 +69,10 @@
 }
     </tbody>
 </table>
+} else {
+    <div class="alert alert-warning">
+        @noLocations
+    </div>
+    <a class="btn text-white text-decoration-none p-3 rounded-2" style="background-color:#04828d; font-weight:700"
+        asp-controller="Localizacoes" asp-action="Create">Cadastrar Localização</a>
+}
