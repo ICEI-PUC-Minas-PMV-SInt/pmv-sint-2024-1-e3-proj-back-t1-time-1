@@ -192,6 +192,7 @@ Responsáveis:
 Lista de clientes
 ![Tela - Listagem de Clientes](./img/Telas/Clientes/listagem_clientes.png)
 
+Cadastro
 ![Tela - Cadastro de Clientes](./img/Telas/Clientes/cadastro_clientes_1.png)
 ![Tela - Cadastro de Clientes](./img/Telas/Clientes/cadastro_clientes_2.png)
 
@@ -212,6 +213,21 @@ Responsável:
 - Criação da View e Estilização: Gean Campos
 
 ### Fornecedores
+
+Lista de fornecedores
+![Tela - Listagem de Fornecedores](./img/Telas/Fornecedores/listagem_fornecedores.png)
+
+Cadastro
+![Tela - Cadastro de Fornecedores](./img/Telas/Fornecedores/cadastro_fornecedores.png)
+
+Detalhes
+![Tela - Detalhes dos Fornecedores](./img/Telas/Fornecedores/detalhes_fornecedores.png)
+
+Edição
+![Tela - Edição de Fornecedores](./img/Telas/Fornecedores/editar_fornecedores.png)
+
+Exclusão
+![Tela - Exclusão de Fornecedores](./img/Telas/Fornecedores/excluir_fornecedores.png)
 
 Responsável:
 
