@@ -237,7 +237,20 @@ Responsável:
 
 ### Vendas
 
-#### Página funcionando totalmente, mas existe a dependência da criação de um cliente, o que não está totalmente implementado ainda.
+Lista de vendas
+![Tela - Listagem de Vendas](./img/Telas/Vendas/listagem_vendas.png)
+
+Cadastro
+![Tela - Cadastro de Vendas](./img/Telas/Vendas/cadastro_vendas.png.png)
+
+Detalhes
+![Tela - Detalhes dos Vendas](./img/Telas/Vendas/detalhes_vendas.png)
+
+Edição
+![Tela - Edição de Vendas](./img/Telas/Vendas/editar_vendas.png)
+
+Exclusão
+![Tela - Exclusão de Vendas](./img/Telas/Vendas/excluir_vendas.png)
 
 Responsável:
 
