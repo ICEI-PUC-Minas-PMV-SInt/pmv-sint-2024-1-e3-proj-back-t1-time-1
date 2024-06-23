@@ -6,7 +6,7 @@
 
 `Eixo 03`
 
-Um sistema de estoque está sendo desenvolvido para uma farmácia popular, visando otimizar a gestão de medicamentos e produtos, agilizando reposições e oferecendo relatórios detalhados para uma melhor tomada de decisão.
+Um sistema de estoque foi desenvolvido para uma farmácia popular, visando otimizar a gestão de medicamentos e produtos, agilizando reposições e oferecendo relatórios detalhados para uma melhor tomada de decisão.
 
 ## Integrantes
 
